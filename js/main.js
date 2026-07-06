@@ -156,7 +156,7 @@
   const canvas = $("#net");
   if (canvas) {
     const ctx = canvas.getContext("2d");
-    const RED = "#FF2038";
+    const RED = "#C8102E";
     const SECTORS = ["BANKING", "RETAIL", "F&B", "FUEL & ENERGY", "LOGISTICS", "HOSPITALITY", "HEALTHCARE", "GOVERNMENT"];
     let W = 0, H = 0, dpr = 1, nodes = [], pulses = [], running = false, t = 0;
 
@@ -203,13 +203,13 @@
       // edges: hub -> node
       ctx.lineWidth = 1;
       for (const n of nodes) {
-        ctx.strokeStyle = "rgba(255,255,255,.08)";
+        ctx.strokeStyle = "rgba(17,17,17,.10)";
         ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(n.x, n.y); ctx.stroke();
       }
       // ring edges
       for (let i = 0; i < nodes.length; i++) {
         const a = nodes[i], b = nodes[(i + 1) % nodes.length];
-        ctx.strokeStyle = "rgba(255,255,255,.045)";
+        ctx.strokeStyle = "rgba(17,17,17,.06)";
         ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
       }
 
@@ -221,19 +221,17 @@
         const q = pl.dir === 1 ? pl.p : 1 - pl.p;
         const x = cx + (n.x - cx) * q, y = cy + (n.y - cy) * q;
         ctx.fillStyle = RED;
-        ctx.shadowColor = RED; ctx.shadowBlur = 10;
         ctx.beginPath(); ctx.arc(x, y, 2.4, 0, Math.PI * 2); ctx.fill();
-        ctx.shadowBlur = 0;
       }
 
       // sector nodes + labels
-      ctx.font = "10px 'JetBrains Mono', monospace";
+      ctx.font = "500 10px 'Inter', sans-serif";
       for (const n of nodes) {
-        ctx.fillStyle = "rgba(255,255,255,.9)";
+        ctx.fillStyle = "rgba(17,17,17,.85)";
         ctx.beginPath(); ctx.arc(n.x, n.y, 3, 0, Math.PI * 2); ctx.fill();
-        ctx.strokeStyle = "rgba(255,255,255,.18)";
+        ctx.strokeStyle = "rgba(17,17,17,.18)";
         ctx.beginPath(); ctx.arc(n.x, n.y, 8 + Math.sin(t * 1.4 + n.ph) * 1.5, 0, Math.PI * 2); ctx.stroke();
-        ctx.fillStyle = "rgba(255,255,255,.5)";
+        ctx.fillStyle = "rgba(17,17,17,.55)";
         const above = n.by < cy;
         ctx.textAlign = "center";
         ctx.fillText(n.label, n.x, above ? n.y - 18 : n.y + 27);
@@ -241,16 +239,14 @@
 
       // hub
       const hubR = 5 + Math.sin(t * 2) * 0.8;
-      ctx.shadowColor = RED; ctx.shadowBlur = 26;
       ctx.fillStyle = RED;
       ctx.beginPath(); ctx.arc(cx, cy, hubR, 0, Math.PI * 2); ctx.fill();
-      ctx.shadowBlur = 0;
-      ctx.strokeStyle = "rgba(255,32,56,.4)";
+      ctx.strokeStyle = "rgba(200,16,46,.38)";
       ctx.beginPath(); ctx.arc(cx, cy, 16 + Math.sin(t * 2) * 2, 0, Math.PI * 2); ctx.stroke();
-      ctx.strokeStyle = "rgba(255,32,56,.15)";
+      ctx.strokeStyle = "rgba(200,16,46,.14)";
       ctx.beginPath(); ctx.arc(cx, cy, 30 + Math.sin(t * 1.3) * 3, 0, Math.PI * 2); ctx.stroke();
-      ctx.fillStyle = "#fff";
-      ctx.font = "600 11px 'JetBrains Mono', monospace";
+      ctx.fillStyle = "#111111";
+      ctx.font = "600 11px 'Inter', sans-serif";
       ctx.textAlign = "center";
       ctx.fillText("ARAHNETS", cx, cy + 52);
 
