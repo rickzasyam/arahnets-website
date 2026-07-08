@@ -153,6 +153,44 @@ em{ font-style:italic; color:inherit; }
 .nav-links a:hover{ color:var(--ink); }
 .nav-links a:hover::after{ transform:scaleX(1); transform-origin:left; }
 
+/* ---------- language switcher ---------- */
+.nav-actions{ display:flex; align-items:center; gap:20px; }
+.lang{ position:relative; }
+.lang-btn{
+  display:inline-flex; align-items:center; gap:7px;
+  background:none; border:0; cursor:pointer;
+  font-family:var(--font-m); font-weight:500; font-size:11px;
+  letter-spacing:.18em; text-transform:uppercase; color:var(--ink70);
+  padding:6px 2px;
+  transition:color .3s;
+}
+.lang-btn:hover{ color:var(--ink); }
+.lang-caret{ font-size:8px; transition:transform .3s var(--ease); }
+.lang-btn[aria-expanded="true"] .lang-caret{ transform:rotate(180deg); }
+.lang-menu{
+  position:absolute; top:calc(100% + 14px); right:-6px; z-index:160;
+  min-width:200px; padding:6px 0;
+  background:var(--panel);
+  border:1px solid var(--line2);
+  box-shadow:0 18px 44px -18px rgba(17,17,17,.28);
+}
+.lang-menu[hidden]{ display:none; }
+.lang-menu li{
+  display:flex; align-items:center; gap:10px;
+  padding:10px 20px;
+  font-size:12.5px; color:var(--ink70);
+  cursor:pointer;
+  transition:background .25s, color .25s;
+}
+.lang-menu li::before{
+  content:""; width:5px; height:5px; border-radius:50%;
+  background:transparent; flex-shrink:0;
+  transition:background .25s;
+}
+.lang-menu li:hover{ background:var(--bg2); color:var(--ink); }
+.lang-menu li[aria-selected="true"]{ color:var(--ink); font-weight:600; }
+.lang-menu li[aria-selected="true"]::before{ background:var(--red); }
+
 /* ---------- buttons ---------- */
 .btn{
   display:inline-flex; align-items:center; gap:10px;
@@ -836,6 +874,36 @@ body.loaded .hl-in{ transform:translateY(0); }
 }
 
 /* ============================================================
+   CJK language adjustments
+   ============================================================ */
+html[lang="ja"]{
+  --font-d:"Plus Jakarta Sans","Noto Sans JP",system-ui,sans-serif;
+  --font-b:"Plus Jakarta Sans","Noto Sans JP",system-ui,sans-serif;
+  --font-m:"Plus Jakarta Sans","Noto Sans JP",system-ui,sans-serif;
+}
+html[lang="zh-CN"]{
+  --font-d:"Plus Jakarta Sans","Noto Sans SC",system-ui,sans-serif;
+  --font-b:"Plus Jakarta Sans","Noto Sans SC",system-ui,sans-serif;
+  --font-m:"Plus Jakarta Sans","Noto Sans SC",system-ui,sans-serif;
+}
+html[lang="zh-TW"]{
+  --font-d:"Plus Jakarta Sans","Noto Sans TC",system-ui,sans-serif;
+  --font-b:"Plus Jakarta Sans","Noto Sans TC",system-ui,sans-serif;
+  --font-m:"Plus Jakarta Sans","Noto Sans TC",system-ui,sans-serif;
+}
+/* wide Latin tracking looks broken on kanji/hanzi — pull it in */
+html[lang="ja"] .mono, html[lang|="zh"] .mono{ letter-spacing:.12em; }
+/* no fake-oblique CJK */
+html[lang="ja"] em, html[lang|="zh"] em,
+html[lang="ja"] .svc-tagline, html[lang|="zh"] .svc-tagline{ font-style:normal; }
+/* CJK glyphs need a touch more air in big display type */
+html[lang="ja"] .display, html[lang|="zh"] .display,
+html[lang="ja"] .statement, html[lang|="zh"] .statement,
+html[lang="ja"] .section-title, html[lang|="zh"] .section-title{
+  letter-spacing:.01em; line-height:1.22;
+}
+
+/* ============================================================
    responsive
    ============================================================ */
 @media (max-width:1080px){
@@ -853,6 +921,8 @@ body.loaded .hl-in{ transform:translateY(0); }
 }
 @media (max-width:760px){
   .nav-links{ display:none; }
+  .nav-actions{ gap:12px; }
+  .lang-menu{ right:-2px; }
   .display{ font-size:clamp(32px, calc(12vw - 7px), 64px); }
   .section{ padding:100px 0; }
   .hero{ padding-bottom:100px; }

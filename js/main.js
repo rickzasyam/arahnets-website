@@ -42,7 +42,7 @@
   const fmt = (v, el) => {
     const dec = +el.dataset.decimals || 0;
     let out = v.toFixed(dec);
-    if (el.dataset.format === "comma") out = (+out).toLocaleString("en-US");
+    if (el.dataset.format === "comma") out = (+out).toLocaleString(window.__i18nLocale || "id-ID");
     return out;
   };
   const cio = new IntersectionObserver((entries) => {
@@ -157,7 +157,7 @@
   if (canvas) {
     const ctx = canvas.getContext("2d");
     const RED = "#C8102E";
-    const SECTORS = ["BANKING", "RETAIL", "F&B", "FUEL & ENERGY", "LOGISTICS", "HOSPITALITY", "HEALTHCARE", "GOVERNMENT"];
+    const SECTORS = ["PERBANKAN", "RITEL", "F&B", "BBM & ENERGI", "LOGISTIK", "PERHOTELAN", "KESEHATAN", "PEMERINTAHAN"];
     let W = 0, H = 0, dpr = 1, nodes = [], pulses = [], running = false, t = 0;
 
     const size = () => {
@@ -268,6 +268,17 @@
       }
     }, { threshold: 0.05 });
     nio.observe(canvas);
+
+    // relabel sectors when the language changes
+    document.addEventListener("i18n:applied", (e) => {
+      const d = (e.detail && e.detail.dict) || {};
+      for (let i = 0; i < SECTORS.length; i++) {
+        const v = d["net.s" + (i + 1)];
+        if (v) SECTORS[i] = v;
+      }
+      build();
+      if (!running || reduced) draw();
+    });
   }
 
   /* ---------- client logo marquee ---------- */
