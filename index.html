@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ARAHNETS — Payment Infrastructure, Engineered · EDC Terminals · Rental · Field Services · Software</title>
+  <title>ARAHNETS — Infrastruktur Pembayaran, Direkayasa · Terminal EDC · Sewa EDC · Layanan Lapangan · Software</title>
   <meta name="description"
-    content="ARAHNETS is an Ingenico-certified payment technology partner since 2006 — EDC terminal procurement, rental, field maintenance and terminal software development for enterprises across Indonesia.">
-  <link rel="icon"
-    type="image/png" href="assets/icon.png"">
+    content="ARAHNETS adalah mitra teknologi pembayaran tersertifikasi Ingenico sejak 2006 — pengadaan terminal EDC, sewa, pemeliharaan lapangan, dan pengembangan software terminal untuk perusahaan di seluruh Indonesia.">
+  <link rel="icon" type="image/png" href="assets/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -27,7 +26,7 @@
     <div class="loader-inner">
       <span class="loader-mark"></span>
       <span class="loader-word">ARAHNETS</span>
-      <span class="loader-status mono">ESTABLISHING SECURE SESSION</span>
+      <span class="loader-status mono" data-i18n="loader.status">MEMBANGUN SESI AMAN</span>
       <span class="loader-track"><span class="loader-fill"></span></span>
     </div>
   </div>
@@ -42,13 +41,28 @@
         </span>
       </a>
       <div class="nav-links" aria-label="Primary">
-        <a href="#services">Services</a>
-        <a href="#proof">Proof</a>
-        <a href="#process">Process</a>
-        <a href="#software">Software</a>
-        <a href="#network">Network</a>
+        <a href="#services" data-i18n="nav.services">Layanan</a>
+        <a href="#proof" data-i18n="nav.proof">Bukti</a>
+        <a href="#process" data-i18n="nav.process">Alur</a>
+        <a href="#software" data-i18n="nav.software">Software</a>
+        <a href="#network" data-i18n="nav.network">Jaringan</a>
       </div>
-      <a href="#contact" class="btn btn-red btn-sm">Deploy with us</a>
+      <div class="nav-actions">
+        <div class="lang" id="lang">
+          <button class="lang-btn mono" id="langBtn" type="button" aria-haspopup="listbox" aria-expanded="false"
+            aria-label="Pilih bahasa" data-i18n-aria="lang.aria">
+            <span id="langCur">ID</span><span class="lang-caret" aria-hidden="true">▾</span>
+          </button>
+          <ul class="lang-menu" id="langMenu" role="listbox" aria-label="Bahasa" hidden>
+            <li role="option" data-lang="id" aria-selected="true">Bahasa Indonesia</li>
+            <li role="option" data-lang="en" aria-selected="false">English</li>
+            <li role="option" data-lang="ja" aria-selected="false">日本語</li>
+            <li role="option" data-lang="zh-CN" aria-selected="false">简体中文</li>
+            <li role="option" data-lang="zh-TW" aria-selected="false">繁體中文</li>
+          </ul>
+        </div>
+        <a href="#contact" class="btn btn-red btn-sm" data-i18n="nav.cta">Deploy bersama kami</a>
+      </div>
     </div>
   </nav>
 
@@ -64,23 +78,28 @@
 
     <div class="hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow mono"><span class="dot" aria-hidden="true"></span>INGENICO CERTIFIED PARTNER &nbsp;·&nbsp;
-          SINCE 2006</p>
+        <p class="eyebrow mono"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.eyebrow">MITRA
+            TERSERTIFIKASI INGENICO · SEJAK 2006</span></p>
         <h1 class="display">
-          <span class="hl"><span class="hl-in">Payment</span></span>
-          <span class="hl"><span class="hl-in">infrastructure<span class="red">,</span></span></span>
-          <span class="hl"><span class="hl-in">engineered<span class="red-solid">.</span></span></span>
+          <span class="hl"><span class="hl-in"><span data-i18n="hero.l1">Infrastruktur</span><span class="red"
+                data-i18n="hero.p1"></span></span></span>
+          <span class="hl"><span class="hl-in"><span data-i18n="hero.l2">pembayaran</span><span class="red"
+                data-i18n="hero.p2">,</span></span></span>
+          <span class="hl"><span class="hl-in"><span data-i18n="hero.l3">direkayasa</span><span class="red-solid"
+                data-i18n="hero.p3">.</span></span></span>
         </h1>
-        <p class="hero-sub">ARAHNETS procures, rents, maintains and programs EDC terminal fleets for enterprises that
-          cannot afford a failed transaction. One certified partner — from purchase order to production.</p>
+        <p class="hero-sub" data-i18n="hero.sub">ARAHNETS mengadakan, menyewakan, memelihara, dan memprogram armada
+          terminal EDC bagi perusahaan yang tidak boleh gagal bertransaksi. Satu mitra tersertifikasi — dari purchase
+          order hingga produksi.</p>
         <div class="hero-cta">
-          <a href="#contact" class="btn btn-red">Start a deployment <span class="arr" aria-hidden="true">→</span></a>
-          <a href="#services" class="btn btn-ghost">Explore services</a>
+          <a href="#contact" class="btn btn-red"><span data-i18n="hero.cta1">Mulai deployment</span> <span class="arr"
+              aria-hidden="true">→</span></a>
+          <a href="#services" class="btn btn-ghost"><span data-i18n="hero.cta2">Jelajahi layanan</span></a>
         </div>
         <div class="hero-meta mono">
-          <span>20 YRS OPERATING</span><span class="sep">/</span>
-          <span>15,000+ TERMINALS</span><span class="sep">/</span>
-          <span>99.98% UPTIME</span>
+          <span data-i18n="hero.m1">20 TAHUN BEROPERASI</span><span class="sep">/</span>
+          <span data-i18n="hero.m2">15.000+ TERMINAL</span><span class="sep">/</span>
+          <span data-i18n="hero.m3">UPTIME 99,98%</span>
         </div>
       </div>
 
@@ -88,7 +107,7 @@
         <!-- EDC terminal -->
         <div class="hcard hcard-terminal" data-p="10">
           <svg viewBox="0 0 260 420" width="260" height="420" role="img"
-            aria-label="Ingenico EDC payment terminal showing an approved transaction">
+            aria-label="Terminal pembayaran EDC Ingenico menampilkan transaksi yang disetujui">
             <defs>
               <linearGradient id="scr" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0" stop-color="#111114" />
@@ -150,20 +169,22 @@
 
         <!-- live feed -->
         <div class="hcard hcard-feed" data-p="22">
-          <div class="feed-head mono"><span><span class="dot"></span>LIVE ACQUIRING FEED</span><span class="feed-tps">—
-              TPS 41.2</span></div>
+          <div class="feed-head mono"><span><span class="dot"></span><span data-i18n="hero.feed">FEED TRANSAKSI
+                LANGSUNG</span></span><span class="feed-tps">— TPS 41.2</span></div>
           <ul class="feed" id="feed" aria-live="off"></ul>
         </div>
 
         <!-- uptime chip -->
-        <div class="chip chip-uptime mono" data-p="34"><span class="dot"></span>FLEET
-          UPTIME&nbsp;<strong>99.98%</strong></div>
+        <div class="chip chip-uptime mono" data-p="34"><span class="dot"></span><span data-i18n="hero.chipUp">UPTIME
+            ARMADA</span>&nbsp;<strong>99.98%</strong></div>
         <!-- latency chip -->
-        <div class="chip chip-latency mono" data-p="30">AUTH LATENCY&nbsp;<strong>212ms</strong></div>
+        <div class="chip chip-latency mono" data-p="30"><span data-i18n="hero.chipLat">LATENSI
+            OTORISASI</span>&nbsp;<strong>212ms</strong></div>
       </div>
     </div>
 
-    <a class="scroll-cue mono" href="#credentials">SCROLL<span class="cue-line" aria-hidden="true"></span></a>
+    <a class="scroll-cue mono" href="#credentials"><span data-i18n="hero.scroll">GULIR</span><span class="cue-line"
+        aria-hidden="true"></span></a>
   </header>
 
   <!-- ticker -->
@@ -171,14 +192,18 @@
     <div class="ticker">
       <div class="ticker-track">
         <span class="ticker-set">
-          <span>INGENICO CERTIFIED</span><i>◆</i><span>EST. 2006</span><i>◆</i><span>TERMINAL
-            PROCUREMENT</span><i>◆</i><span>EDC RENTAL</span><i>◆</i><span>FIELD MAINTENANCE</span><i>◆</i><span>EDC
-            SOFTWARE DEVELOPMENT</span><i>◆</i><span>NATIONWIDE COVERAGE</span><i>◆</i>
+          <span data-i18n="tick.1">TERSERTIFIKASI INGENICO</span><i>◆</i><span data-i18n="tick.2">SEJAK
+            2006</span><i>◆</i><span data-i18n="tick.3">PENGADAAN TERMINAL</span><i>◆</i><span data-i18n="tick.4">SEWA
+            EDC</span><i>◆</i><span data-i18n="tick.5">PEMELIHARAAN LAPANGAN</span><i>◆</i><span
+            data-i18n="tick.6">PENGEMBANGAN SOFTWARE EDC</span><i>◆</i><span data-i18n="tick.7">JANGKAUAN
+            NASIONAL</span><i>◆</i>
         </span>
         <span class="ticker-set">
-          <span>INGENICO CERTIFIED</span><i>◆</i><span>EST. 2006</span><i>◆</i><span>TERMINAL
-            PROCUREMENT</span><i>◆</i><span>EDC RENTAL</span><i>◆</i><span>FIELD MAINTENANCE</span><i>◆</i><span>EDC
-            SOFTWARE DEVELOPMENT</span><i>◆</i><span>NATIONWIDE COVERAGE</span><i>◆</i>
+          <span data-i18n="tick.1">TERSERTIFIKASI INGENICO</span><i>◆</i><span data-i18n="tick.2">SEJAK
+            2006</span><i>◆</i><span data-i18n="tick.3">PENGADAAN TERMINAL</span><i>◆</i><span data-i18n="tick.4">SEWA
+            EDC</span><i>◆</i><span data-i18n="tick.5">PEMELIHARAAN LAPANGAN</span><i>◆</i><span
+            data-i18n="tick.6">PENGEMBANGAN SOFTWARE EDC</span><i>◆</i><span data-i18n="tick.7">JANGKAUAN
+            NASIONAL</span><i>◆</i>
         </span>
       </div>
     </div>
@@ -188,49 +213,50 @@
   <section class="section credentials" id="credentials">
     <div class="container">
       <div class="section-head" data-reveal>
-        <span class="sec-label mono">[ 01 ] — CREDENTIALS</span>
+        <span class="sec-label mono" data-i18n="cred.label">[ 01 ] — KREDENSIAL</span>
       </div>
       <div class="cred-grid">
         <div class="cred-copy">
           <h2 class="statement" data-reveal>
-            Certified by <em>Ingenico</em>.<br>
-            Operating since <em>2006</em>.<br>
-            Trusted where a failed<br class="bp">
-            transaction is not an option<span class="red-solid">.</span>
+            <span data-i18n-html="cred.statement">Tersertifikasi <em>Ingenico</em>.<br>
+              Beroperasi sejak <em>2006</em>.<br>
+              Dipercaya ketika transaksi gagal<br class="bp">
+              bukanlah sebuah pilihan</span><span class="red-solid" data-i18n="p.dot">.</span>
           </h2>
-          <p class="lede" data-reveal style="--d:.1s">Certification is not a badge to us — it is an operating standard.
-            Two decades of procurement discipline, field rigor and terminal-level engineering, audited against the
-            hardware we deploy.</p>
+          <p class="lede" data-reveal style="--d:.1s" data-i18n="cred.lede">Bagi kami sertifikasi bukan sekadar lencana
+            — melainkan standar operasi. Dua dekade disiplin pengadaan, ketelitian lapangan, dan rekayasa tingkat
+            terminal, teraudit terhadap perangkat keras yang kami terapkan.</p>
           <ul class="cred-chips mono" data-reveal style="--d:.18s">
-            <li>EMV L1 / L2 DEVICES</li>
-            <li>SECURE KEY INJECTION</li>
-            <li>PCI-ALIGNED HANDLING</li>
-            <li>NATIONWIDE FIELD OPS</li>
+            <li data-i18n="cred.chip1">PERANGKAT EMV L1/L2</li>
+            <li data-i18n="cred.chip2">INJEKSI KUNCI AMAN</li>
+            <li data-i18n="cred.chip3">PENANGANAN SELARAS PCI</li>
+            <li data-i18n="cred.chip4">OPERASI LAPANGAN NASIONAL</li>
           </ul>
         </div>
         <div class="cred-card-wrap" data-reveal style="--d:.15s">
           <div class="cred-card">
-            <div class="cred-card-top mono"><span>CERTIFIED PARTNER</span><span class="dot"></span></div>
+            <div class="cred-card-top mono"><span data-i18n="cred.cardTop">MITRA TERSERTIFIKASI</span><span
+                class="dot"></span></div>
             <div class="cred-card-brand">INGENICO</div>
             <dl class="cred-rows mono">
               <div>
-                <dt>PARTNER</dt>
-                <dd>ARAHNETS</dd>
+                <dt data-i18n="cred.r1t">MITRA</dt>
+                <dd data-i18n="cred.r1v">ARAHNETS</dd>
               </div>
               <div>
-                <dt>SINCE</dt>
-                <dd>2006</dd>
+                <dt data-i18n="cred.r2t">SEJAK</dt>
+                <dd data-i18n="cred.r2v">2006</dd>
               </div>
               <div>
-                <dt>SCOPE</dt>
-                <dd>PROCUREMENT · RENTAL · FIELD · SOFTWARE</dd>
+                <dt data-i18n="cred.r3t">CAKUPAN</dt>
+                <dd data-i18n="cred.r3v">PENGADAAN · SEWA · LAPANGAN · SOFTWARE</dd>
               </div>
               <div>
-                <dt>STATUS</dt>
-                <dd class="red">● ACTIVE</dd>
+                <dt data-i18n="cred.r4t">STATUS</dt>
+                <dd class="red" data-i18n="cred.r4v">● AKTIF</dd>
               </div>
             </dl>
-            <div class="cred-card-foot mono">AUTH — ID · 2006 → PRESENT</div>
+            <div class="cred-card-foot mono" data-i18n="cred.foot">OTORISASI — ID · 2006 → SEKARANG</div>
           </div>
           <div class="cred-card-shadow" aria-hidden="true"></div>
         </div>
@@ -242,10 +268,11 @@
   <section class="section services" id="services">
     <div class="container">
       <div class="section-head" data-reveal>
-        <span class="sec-label mono">[ 02 ] — CAPABILITIES</span>
-        <h2 class="section-title">Four modules.<br>One payment stack<span class="red-solid">.</span></h2>
-        <p class="section-sub">Not a menu of services — an integrated stack. Each module runs standalone or as part of a
-          fully managed terminal estate.</p>
+        <span class="sec-label mono" data-i18n="svc.label">[ 02 ] — KAPABILITAS</span>
+        <h2 class="section-title"><span data-i18n-html="svc.title">Empat modul.<br>Satu payment stack</span><span
+            class="red-solid" data-i18n="p.dot">.</span></h2>
+        <p class="section-sub" data-i18n="svc.sub">Bukan sekadar daftar layanan — melainkan satu kesatuan terintegrasi.
+          Setiap modul dapat berjalan mandiri atau sebagai bagian dari pengelolaan penuh armada terminal.</p>
       </div>
     </div>
 
@@ -253,19 +280,26 @@
       <article class="svc" style="--i:0">
         <div class="svc-inner container">
           <div class="svc-main">
-            <div class="svc-topline mono"><span class="svc-idx">01</span><span class="svc-tag">MODULE — TRM·01</span>
+            <div class="svc-topline mono"><span class="svc-idx">01</span><span class="svc-tag"
+                data-i18n="svc1.tag">MODUL — TRM·01</span>
             </div>
-            <h3 class="svc-title">Terminal EDC</h3>
-            <p class="svc-tagline">Own the hardware layer.</p>
-            <p class="svc-desc">Procurement and provisioning of certified Ingenico terminal fleets — sourced,
-              configured, key-injected and delivered deployment-ready to every branch, counter and courier.</p>
-            <a class="svc-link" href="#contact">Configure a fleet <span class="arr">→</span></a>
+            <h3 class="svc-title" data-i18n="svc1.title">Terminal EDC</h3>
+            <p class="svc-tagline" data-i18n="svc1.tagline">Kuasai lapisan perangkat keras.</p>
+            <p class="svc-desc" data-i18n="svc1.desc">Pengadaan dan provisioning armada terminal Ingenico tersertifikasi
+              — bersumber, terkonfigurasi, ter-injeksi kunci, dan dikirim siap pakai ke setiap cabang, kasir, dan
+              kurir.</p>
+            <a class="svc-link" href="#contact"><span data-i18n="svc1.link">Rancang armada Anda</span> <span
+                class="arr">→</span></a>
           </div>
           <div class="svc-specs mono">
-            <div class="spec"><span>DEVICES</span><b>INGENICO LINEUP — COUNTERTOP / MOBILE / ANDROID</b></div>
-            <div class="spec"><span>SECURITY</span><b>EMV L1/L2 · SECURE KEY INJECTION</b></div>
-            <div class="spec"><span>PROVISIONING</span><b>PRE-STAGED PROFILES PER ACQUIRER</b></div>
-            <div class="spec"><span>LOGISTICS</span><b>NATIONWIDE DELIVERY &amp; ASSET TAGGING</b></div>
+            <div class="spec"><span data-i18n="svc1.s1t">PERANGKAT</span><b data-i18n="svc1.s1v">LINI INGENICO —
+                COUNTERTOP / MOBILE / ANDROID</b></div>
+            <div class="spec"><span data-i18n="svc1.s2t">KEAMANAN</span><b data-i18n="svc1.s2v">EMV L1/L2 · INJEKSI
+                KUNCI AMAN</b></div>
+            <div class="spec"><span data-i18n="svc1.s3t">PROVISIONING</span><b data-i18n="svc1.s3v">PROFIL PRA-SIAP PER
+                ACQUIRER</b></div>
+            <div class="spec"><span data-i18n="svc1.s4t">LOGISTIK</span><b data-i18n="svc1.s4v">PENGIRIMAN NASIONAL &
+                PENANDAAN ASET</b></div>
           </div>
         </div>
       </article>
@@ -273,19 +307,26 @@
       <article class="svc" style="--i:1">
         <div class="svc-inner container">
           <div class="svc-main">
-            <div class="svc-topline mono"><span class="svc-idx">02</span><span class="svc-tag">MODULE — RNT·02</span>
+            <div class="svc-topline mono"><span class="svc-idx">02</span><span class="svc-tag"
+                data-i18n="svc2.tag">MODUL — RNT·02</span>
             </div>
-            <h3 class="svc-title">EDC Rent</h3>
-            <p class="svc-tagline">Fleet capacity without capital expense.</p>
-            <p class="svc-desc">Rental programs that flex with your volume — seasonal peaks, events, pilots or full
-              estates. Managed devices, managed swaps, one predictable line item.</p>
-            <a class="svc-link" href="#contact">Scale on demand <span class="arr">→</span></a>
+            <h3 class="svc-title" data-i18n="svc2.title">Sewa EDC</h3>
+            <p class="svc-tagline" data-i18n="svc2.tagline">Kapasitas armada tanpa belanja modal.</p>
+            <p class="svc-desc" data-i18n="svc2.desc">Program sewa yang mengikuti volume Anda — puncak musiman, event,
+              pilot, hingga estate penuh. Perangkat terkelola, penggantian terkelola, satu pos biaya yang
+              terprediksi.</p>
+            <a class="svc-link" href="#contact"><span data-i18n="svc2.link">Skalakan sesuai kebutuhan</span> <span
+                class="arr">→</span></a>
           </div>
           <div class="svc-specs mono">
-            <div class="spec"><span>TERMS</span><b>MONTHLY · SEASONAL · MULTI-YEAR</b></div>
-            <div class="spec"><span>COVERAGE</span><b>SLA-BACKED REPLACEMENT UNITS</b></div>
-            <div class="spec"><span>SCALING</span><b>EVENT &amp; PEAK-SEASON SURGE FLEETS</b></div>
-            <div class="spec"><span>BILLING</span><b>OPEX — ZERO ASSET RISK</b></div>
+            <div class="spec"><span data-i18n="svc2.s1t">KETENTUAN</span><b data-i18n="svc2.s1v">BULANAN · MUSIMAN ·
+                MULTITAHUN</b></div>
+            <div class="spec"><span data-i18n="svc2.s2t">CAKUPAN</span><b data-i18n="svc2.s2v">UNIT PENGGANTI
+                BER-SLA</b></div>
+            <div class="spec"><span data-i18n="svc2.s3t">PENSKALAAN</span><b data-i18n="svc2.s3v">ARMADA TAMBAHAN EVENT
+                & MUSIM PUNCAK</b></div>
+            <div class="spec"><span data-i18n="svc2.s4t">PENAGIHAN</span><b data-i18n="svc2.s4v">OPEX — TANPA RISIKO
+                ASET</b></div>
           </div>
         </div>
       </article>
@@ -293,19 +334,26 @@
       <article class="svc" style="--i:2">
         <div class="svc-inner container">
           <div class="svc-main">
-            <div class="svc-topline mono"><span class="svc-idx">03</span><span class="svc-tag">MODULE — FLD·03</span>
+            <div class="svc-topline mono"><span class="svc-idx">03</span><span class="svc-tag"
+                data-i18n="svc3.tag">MODUL — FLD·03</span>
             </div>
-            <h3 class="svc-title">Field Services</h3>
-            <p class="svc-tagline">Uptime is a discipline, not a promise.</p>
-            <p class="svc-desc">Preventive maintenance, corrective repair and first-line response across the estate —
-              technicians, spare-part logistics and swap stock engineered around your SLA.</p>
-            <a class="svc-link" href="#contact">Protect your uptime <span class="arr">→</span></a>
+            <h3 class="svc-title" data-i18n="svc3.title">Layanan Lapangan</h3>
+            <p class="svc-tagline" data-i18n="svc3.tagline">Uptime adalah disiplin, bukan janji.</p>
+            <p class="svc-desc" data-i18n="svc3.desc">Pemeliharaan preventif, perbaikan korektif, dan respons lini
+              pertama di seluruh estate — teknisi, logistik suku cadang, dan stok pengganti yang dirancang mengikuti
+              SLA Anda.</p>
+            <a class="svc-link" href="#contact"><span data-i18n="svc3.link">Lindungi uptime Anda</span> <span
+                class="arr">→</span></a>
           </div>
           <div class="svc-specs mono">
-            <div class="spec"><span>MAINTENANCE</span><b>PREVENTIVE CYCLES &amp; HEALTH CHECKS</b></div>
-            <div class="spec"><span>REPAIR</span><b>CORRECTIVE + DEPOT-LEVEL SERVICE</b></div>
-            <div class="spec"><span>RESPONSE</span><b>FIRST-LINE ON-SITE INTERVENTION</b></div>
-            <div class="spec"><span>PARTS</span><b>MANAGED SPARE &amp; SWAP INVENTORY</b></div>
+            <div class="spec"><span data-i18n="svc3.s1t">PEMELIHARAAN</span><b data-i18n="svc3.s1v">SIKLUS PREVENTIF &
+                PEMERIKSAAN KESEHATAN</b></div>
+            <div class="spec"><span data-i18n="svc3.s2t">PERBAIKAN</span><b data-i18n="svc3.s2v">KOREKTIF + SERVIS
+                TINGKAT DEPO</b></div>
+            <div class="spec"><span data-i18n="svc3.s3t">RESPONS</span><b data-i18n="svc3.s3v">INTERVENSI ON-SITE LINI
+                PERTAMA</b></div>
+            <div class="spec"><span data-i18n="svc3.s4t">SUKU CADANG</span><b data-i18n="svc3.s4v">INVENTORI CADANGAN &
+                PENGGANTI TERKELOLA</b></div>
           </div>
         </div>
       </article>
@@ -313,19 +361,26 @@
       <article class="svc" style="--i:3">
         <div class="svc-inner container">
           <div class="svc-main">
-            <div class="svc-topline mono"><span class="svc-idx">04</span><span class="svc-tag">MODULE — SWD·04</span>
+            <div class="svc-topline mono"><span class="svc-idx">04</span><span class="svc-tag"
+                data-i18n="svc4.tag">MODUL — SWD·04</span>
             </div>
-            <h3 class="svc-title">Software Development</h3>
-            <p class="svc-tagline">The terminal is a platform. We program it.</p>
-            <p class="svc-desc">Custom EDC applications built directly on the terminal OS — payment flows, host
-              integration, loyalty, QR and remote update pipelines shipped to thousands of devices at once.</p>
-            <a class="svc-link" href="#software">See it running <span class="arr">→</span></a>
+            <h3 class="svc-title" data-i18n="svc4.title">Pengembangan Software</h3>
+            <p class="svc-tagline" data-i18n="svc4.tagline">Terminal adalah platform. Kami yang memprogramnya.</p>
+            <p class="svc-desc" data-i18n="svc4.desc">Aplikasi EDC kustom yang dibangun langsung di atas OS terminal —
+              alur pembayaran, integrasi host, loyalti, QR, dan pipeline pembaruan jarak jauh yang dikirim ke ribuan
+              perangkat sekaligus.</p>
+            <a class="svc-link" href="#software"><span data-i18n="svc4.link">Lihat cara kerjanya</span> <span
+                class="arr">→</span></a>
           </div>
           <div class="svc-specs mono">
-            <div class="spec"><span>PLATFORMS</span><b>TELIUM &amp; ANDROID EDC</b></div>
-            <div class="spec"><span>INTEGRATION</span><b>ISO 8583 HOST &amp; SWITCHING</b></div>
-            <div class="spec"><span>FEATURES</span><b>QRIS · LOYALTY · MULTI-ACQUIRER</b></div>
-            <div class="spec"><span>DELIVERY</span><b>REMOTE FLEET UPDATE PIPELINE</b></div>
+            <div class="spec"><span data-i18n="svc4.s1t">PLATFORM</span><b data-i18n="svc4.s1v">TELIUM & ANDROID
+                EDC</b></div>
+            <div class="spec"><span data-i18n="svc4.s2t">INTEGRASI</span><b data-i18n="svc4.s2v">HOST ISO 8583 &
+                SWITCHING</b></div>
+            <div class="spec"><span data-i18n="svc4.s3t">FITUR</span><b data-i18n="svc4.s3v">QRIS · LOYALTI ·
+                MULTI-ACQUIRER</b></div>
+            <div class="spec"><span data-i18n="svc4.s4t">PENGIRIMAN</span><b data-i18n="svc4.s4v">PIPELINE PEMBARUAN
+                ARMADA JARAK JAUH</b></div>
           </div>
         </div>
       </article>
@@ -337,31 +392,34 @@
     <div class="proof-band" aria-hidden="true"></div>
     <div class="proof-content container">
       <div class="section-head" data-reveal>
-        <span class="sec-label mono">[ 03 ] — PROOF</span>
-        <h2 class="section-title">Measured, not marketed<span class="red-solid">.</span></h2>
+        <span class="sec-label mono" data-i18n="proof.label">[ 03 ] — BUKTI</span>
+        <h2 class="section-title"><span data-i18n="proof.title">Terukur, bukan sekadar klaim</span><span
+            class="red-solid" data-i18n="p.dot">.</span></h2>
       </div>
       <div class="metrics">
         <div class="metric" data-reveal>
           <span class="metric-num"><span class="count" data-count="20">0</span></span>
-          <span class="metric-label mono">YEARS OPERATING</span>
-          <p class="metric-desc">Continuous operation since 2006 — through every network migration and card-scheme
-            mandate.</p>
+          <span class="metric-label mono" data-i18n="proof.m1l">TAHUN BEROPERASI</span>
+          <p class="metric-desc" data-i18n="proof.m1d">Beroperasi tanpa henti sejak 2006 — melewati setiap migrasi
+            jaringan dan mandat skema kartu.</p>
         </div>
         <div class="metric" data-reveal style="--d:.08s">
           <span class="metric-num"><span class="count" data-count="15000" data-format="comma">0</span>+</span>
-          <span class="metric-label mono">TERMINALS DEPLOYED</span>
-          <p class="metric-desc">Procured, provisioned and delivered into production across the archipelago.</p>
+          <span class="metric-label mono" data-i18n="proof.m2l">TERMINAL TERPASANG</span>
+          <p class="metric-desc" data-i18n="proof.m2d">Diadakan, disiapkan, dan dikirim hingga produksi di seluruh
+            nusantara.</p>
         </div>
         <div class="metric" data-reveal style="--d:.16s">
           <span class="metric-num"><span class="count" data-count="12">0</span></span>
-          <span class="metric-label mono">CLIENT SECTORS</span>
-          <p class="metric-desc">Banking, retail, F&amp;B, fuel, logistics, hospitality and more — one estate standard.
-          </p>
+          <span class="metric-label mono" data-i18n="proof.m3l">SEKTOR KLIEN</span>
+          <p class="metric-desc" data-i18n="proof.m3d">Perbankan, ritel, F&B, BBM, logistik, perhotelan, dan lainnya —
+            satu standar estate.</p>
         </div>
         <div class="metric" data-reveal style="--d:.24s">
           <span class="metric-num"><span class="count" data-count="99.98" data-decimals="2">0</span>%</span>
-          <span class="metric-label mono">FLEET UPTIME</span>
-          <p class="metric-desc">Field-serviced availability across managed estates, measured monthly.</p>
+          <span class="metric-label mono" data-i18n="proof.m4l">UPTIME ARMADA</span>
+          <p class="metric-desc" data-i18n="proof.m4d">Ketersediaan hasil layanan lapangan di seluruh estate terkelola,
+            diukur bulanan.</p>
         </div>
       </div>
     </div>
@@ -371,47 +429,52 @@
   <section class="section process" id="process">
     <div class="container">
       <div class="section-head" data-reveal>
-        <span class="sec-label mono">[ 04 ] — PATHWAY</span>
-        <h2 class="section-title">From inquiry<br>to infrastructure<span class="red-solid">.</span></h2>
-        <p class="section-sub">A deployment is not a delivery — it is a sequence. Every ARAHNETS engagement runs the
-          same engineered pathway.</p>
+        <span class="sec-label mono" data-i18n="proc.label">[ 04 ] — ALUR</span>
+        <h2 class="section-title"><span data-i18n-html="proc.title">Dari permintaan<br>menjadi infrastruktur</span><span
+            class="red-solid" data-i18n="p.dot">.</span></h2>
+        <p class="section-sub" data-i18n="proc.sub">Deployment bukan sekadar pengiriman — melainkan sebuah rangkaian.
+          Setiap kerja sama ARAHNETS menempuh alur terukur yang sama.</p>
       </div>
 
       <div class="steps" id="steps">
         <div class="steps-rail" aria-hidden="true"><span id="railFill"></span></div>
 
         <div class="step" data-reveal>
-          <span class="step-idx mono">STEP — 01</span>
-          <h3 class="step-title">Consult</h3>
-          <p class="step-desc">We scope the estate: transaction volume, acquirer relationships, sites, connectivity and
-            SLA targets. You get a fleet design, not a quotation template.</p>
-          <div class="step-chips mono"><span>FLEET SIZING</span><span>ACQUIRER MAP</span><span>SLA TARGETS</span></div>
+          <span class="step-idx mono" data-i18n="proc.s1idx">LANGKAH — 01</span>
+          <h3 class="step-title" data-i18n="proc.s1t">Konsultasi</h3>
+          <p class="step-desc" data-i18n="proc.s1d">Kami memetakan estate Anda: volume transaksi, relasi acquirer,
+            lokasi, konektivitas, dan target SLA. Anda menerima rancangan armada, bukan template penawaran.</p>
+          <div class="step-chips mono"><span data-i18n="proc.s1c1">SIZING ARMADA</span><span
+              data-i18n="proc.s1c2">PETA ACQUIRER</span><span data-i18n="proc.s1c3">TARGET SLA</span></div>
         </div>
 
         <div class="step" data-reveal style="--d:.06s">
-          <span class="step-idx mono">STEP — 02</span>
-          <h3 class="step-title">Provision</h3>
-          <p class="step-desc">Terminals are sourced, configured and key-injected under certified handling. Profiles are
-            pre-staged per acquirer so devices arrive transaction-ready.</p>
-          <div class="step-chips mono"><span>KEY INJECTION</span><span>PROFILE STAGING</span><span>ASSET TAGGING</span>
+          <span class="step-idx mono" data-i18n="proc.s2idx">LANGKAH — 02</span>
+          <h3 class="step-title" data-i18n="proc.s2t">Penyiapan</h3>
+          <p class="step-desc" data-i18n="proc.s2d">Terminal di-sourcing, dikonfigurasi, dan di-injeksi kunci di bawah
+            penanganan tersertifikasi. Profil disiapkan per acquirer sehingga perangkat tiba siap bertransaksi.</p>
+          <div class="step-chips mono"><span data-i18n="proc.s2c1">INJEKSI KUNCI</span><span
+              data-i18n="proc.s2c2">PENYIAPAN PROFIL</span><span data-i18n="proc.s2c3">PENANDAAN ASET</span>
           </div>
         </div>
 
         <div class="step" data-reveal style="--d:.12s">
-          <span class="step-idx mono">STEP — 03</span>
-          <h3 class="step-title">Deploy</h3>
-          <p class="step-desc">Nationwide rollout with on-site installation, merchant training and first-transaction
-            verification at every point of acceptance.</p>
-          <div class="step-chips mono"><span>ON-SITE INSTALL</span><span>TRAINING</span><span>LIVE VERIFICATION</span>
+          <span class="step-idx mono" data-i18n="proc.s3idx">LANGKAH — 03</span>
+          <h3 class="step-title" data-i18n="proc.s3t">Penerapan</h3>
+          <p class="step-desc" data-i18n="proc.s3d">Rollout nasional dengan instalasi on-site, pelatihan merchant, dan
+            verifikasi transaksi pertama di setiap titik penerimaan.</p>
+          <div class="step-chips mono"><span data-i18n="proc.s3c1">INSTALASI ON-SITE</span><span
+              data-i18n="proc.s3c2">PELATIHAN</span><span data-i18n="proc.s3c3">VERIFIKASI LANGSUNG</span>
           </div>
         </div>
 
         <div class="step" data-reveal style="--d:.18s">
-          <span class="step-idx mono">STEP — 04</span>
-          <h3 class="step-title">Sustain</h3>
-          <p class="step-desc">The estate goes under management: preventive maintenance cycles, corrective response,
-            spare logistics and remote software updates — for the life of the fleet.</p>
-          <div class="step-chips mono"><span>PREVENTIVE CYCLES</span><span>SWAP STOCK</span><span>REMOTE UPDATES</span>
+          <span class="step-idx mono" data-i18n="proc.s4idx">LANGKAH — 04</span>
+          <h3 class="step-title" data-i18n="proc.s4t">Pemeliharaan</h3>
+          <p class="step-desc" data-i18n="proc.s4d">Estate masuk pengelolaan: siklus pemeliharaan preventif, respons
+            korektif, logistik suku cadang, dan pembaruan software jarak jauh — sepanjang umur armada.</p>
+          <div class="step-chips mono"><span data-i18n="proc.s4c1">SIKLUS PREVENTIF</span><span
+              data-i18n="proc.s4c2">STOK PENGGANTI</span><span data-i18n="proc.s4c3">PEMBARUAN JARAK JAUH</span>
           </div>
         </div>
       </div>
@@ -422,38 +485,41 @@
   <section class="section software" id="software">
     <div class="container">
       <div class="section-head" data-reveal>
-        <span class="sec-label mono">[ 05 ] — SOFTWARE</span>
-        <h2 class="section-title">We don't just deploy terminals.<br>We <em>program</em> them<span
-            class="red-solid">.</span></h2>
+        <span class="sec-label mono" data-i18n="sw.label">[ 05 ] — SOFTWARE</span>
+        <h2 class="section-title"><span data-i18n-html="sw.title">Kami tidak sekadar memasang terminal.<br>Kami
+            <em>memprogramnya</em></span><span class="red-solid" data-i18n="p.dot">.</span></h2>
       </div>
 
       <div class="sw-grid">
         <div class="sw-copy" data-reveal>
-          <p class="lede">Most providers stop at the hardware. ARAHNETS builds the application layer — the payment
-            flows, host links and update pipelines that turn a device into infrastructure.</p>
+          <p class="lede" data-i18n="sw.lede">Kebanyakan penyedia berhenti di perangkat keras. ARAHNETS membangun
+            lapisan aplikasi — alur pembayaran, koneksi host, dan pipeline pembaruan yang mengubah perangkat menjadi
+            infrastruktur.</p>
           <ul class="sw-features" id="swFeatures">
             <li class="active" data-f="0"><span class="f-idx mono">F·01</span>
               <div>
-                <h4>Fleet operating view</h4>
-                <p>Every terminal, every transaction, one console — health, volume and version state in real time.</p>
+                <h4 data-i18n="sw.f1t">Panel operasi armada</h4>
+                <p data-i18n="sw.f1d">Setiap terminal, setiap transaksi, satu konsol — kesehatan, volume, dan status
+                  versi secara real time.</p>
               </div>
             </li>
             <li data-f="1"><span class="f-idx mono">F·02</span>
               <div>
-                <h4>Host &amp; switching integration</h4>
-                <p>ISO 8583 authorization against acquirer hosts and national switching — QRIS, debit, credit,
-                  multi-acquirer routing.</p>
+                <h4 data-i18n="sw.f2t">Integrasi host & switching</h4>
+                <p data-i18n="sw.f2d">Otorisasi ISO 8583 ke host acquirer dan switching nasional — QRIS, debit, kredit,
+                  routing multi-acquirer.</p>
               </div>
             </li>
             <li data-f="2"><span class="f-idx mono">F·03</span>
               <div>
-                <h4>Remote fleet updates</h4>
-                <p>Signed builds staged and pushed to thousands of terminals overnight — no trucks, no downtime windows.
-                </p>
+                <h4 data-i18n="sw.f3t">Pembaruan armada jarak jauh</h4>
+                <p data-i18n="sw.f3d">Build bertanda tangan disiapkan dan didorong ke ribuan terminal dalam semalam —
+                  tanpa truk, tanpa jendela downtime.</p>
               </div>
             </li>
           </ul>
-          <a href="#contact" class="btn btn-ghost">Discuss a build <span class="arr">→</span></a>
+          <a href="#contact" class="btn btn-ghost"><span data-i18n="sw.btn">Diskusikan kebutuhan Anda</span> <span
+              class="arr">→</span></a>
         </div>
 
         <div class="sw-stage">
@@ -466,9 +532,9 @@
                 <div class="ui-side" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i></div>
                 <div class="ui-main">
                   <div class="ui-stats mono">
-                    <div><span>ONLINE</span><b>14,982</b></div>
+                    <div><span data-i18n="sw.stat1">ONLINE</span><b>14,982</b></div>
                     <div><span>TPS</span><b>41.2</b></div>
-                    <div><span>APPROVAL</span><b class="red">98.7%</b></div>
+                    <div><span data-i18n="sw.stat3">PERSETUJUAN</span><b class="red">98.7%</b></div>
                   </div>
                   <svg class="ui-chart" viewBox="0 0 420 110" preserveAspectRatio="none" aria-hidden="true">
                     <polyline class="chart-area"
@@ -482,7 +548,7 @@
                 </div>
               </div>
             </div>
-            <span class="hcard-tag mono">FLEET CONSOLE</span>
+            <span class="hcard-tag mono" data-i18n="sw.tag1">KONSOL ARMADA</span>
           </div>
 
           <!-- Card 2: host integration code -->
@@ -500,30 +566,32 @@ terminal.<span class="c-red">on</span>(<span class="c-red">"card_present"</span>
     receipt.<span class="c-red">print</span>(tx.<span class="c-red">approve</span>());   <span class="c-dim">// 212ms avg</span>
   }
 });</code></pre>
-              <div class="code-foot mono"><span>F39 — 00 · APPROVED</span><span class="red">LATENCY 212MS</span></div>
+              <div class="code-foot mono"><span>F39 — 00 · APPROVED</span><span class="red"
+                  data-i18n="sw.codeLat">LATENSI 212MS</span></div>
             </div>
-            <span class="hcard-tag mono">HOST INTEGRATION</span>
+            <span class="hcard-tag mono" data-i18n="sw.tag2">INTEGRASI HOST</span>
           </div>
 
           <!-- Card 3: update pipeline -->
           <div class="sw-card" data-feature="2" data-reveal>
             <div class="ui-window">
-              <div class="ui-topbar mono"><span class="ui-dots"><i></i><i></i><i></i></span><span>REMOTE UPDATE — BUILD
-                  4.2.1</span><span class="red">STAGING</span></div>
+              <div class="ui-topbar mono"><span class="ui-dots"><i></i><i></i><i></i></span><span
+                  data-i18n="sw.pipeTop">PEMBARUAN JARAK JAUH — BUILD 4.2.1</span><span class="red">STAGING</span></div>
               <div class="pipe mono">
-                <div class="pipe-row done"><span class="pipe-check">✓</span><span>BUILD SIGNED</span><span
-                    class="pipe-val">SHA-256</span></div>
-                <div class="pipe-row done"><span class="pipe-check">✓</span><span>CANARY FLEET</span><span
-                    class="pipe-val">50 / 50</span></div>
-                <div class="pipe-row live"><span class="pipe-check">●</span><span>NATIONAL ROLLOUT</span><span
-                    class="pipe-val red">68%</span></div>
+                <div class="pipe-row done"><span class="pipe-check">✓</span><span data-i18n="sw.pipe1">BUILD
+                    DITANDATANGANI</span><span class="pipe-val">SHA-256</span></div>
+                <div class="pipe-row done"><span class="pipe-check">✓</span><span data-i18n="sw.pipe2">ARMADA
+                    CANARY</span><span class="pipe-val">50 / 50</span></div>
+                <div class="pipe-row live"><span class="pipe-check">●</span><span data-i18n="sw.pipe3">ROLLOUT
+                    NASIONAL</span><span class="pipe-val red">68%</span></div>
                 <div class="pipe-bar"><span id="pipeFill"></span></div>
-                <div class="pipe-row queue"><span class="pipe-check">○</span><span>VERIFY &amp; SEAL</span><span
-                    class="pipe-val">QUEUED</span></div>
-                <div class="pipe-foot"><span>10,187 / 14,982 TERMINALS UPDATED</span><span>NO DOWNTIME</span></div>
+                <div class="pipe-row queue"><span class="pipe-check">○</span><span data-i18n="sw.pipe4">VERIFIKASI &
+                    SEGEL</span><span class="pipe-val" data-i18n="sw.pipeQ">ANTREAN</span></div>
+                <div class="pipe-foot"><span data-i18n="sw.pipeF1">10.187 / 14.982 TERMINAL DIPERBARUI</span><span
+                    data-i18n="sw.pipeF2">TANPA DOWNTIME</span></div>
               </div>
             </div>
-            <span class="hcard-tag mono">UPDATE PIPELINE</span>
+            <span class="hcard-tag mono" data-i18n="sw.tag3">PIPELINE PEMBARUAN</span>
           </div>
         </div>
       </div>
@@ -534,17 +602,20 @@ terminal.<span class="c-red">on</span>(<span class="c-red">"card_present"</span>
   <section class="section network" id="network">
     <div class="container">
       <div class="section-head center" data-reveal>
-        <span class="sec-label mono">[ 06 ] — MITRA &amp; CLIENT</span>
-        <h2 class="section-title">One network.<br>Every sector that transacts<span class="red-solid">.</span></h2>
-        <p class="section-sub center">Acquiring banks, switching networks and enterprise merchants run on estates we
-          deploy and keep alive.</p>
+        <span class="sec-label mono" data-i18n="net.label">[ 06 ] — MITRA & KLIEN</span>
+        <h2 class="section-title"><span data-i18n-html="net.title">Satu jaringan.<br>Semua sektor yang
+            bertransaksi</span><span class="red-solid" data-i18n="p.dot">.</span></h2>
+        <p class="section-sub center" data-i18n="net.sub">Bank acquirer, jaringan switching, dan merchant enterprise
+          berjalan di atas estate yang kami terapkan dan jaga tetap hidup.</p>
       </div>
     </div>
     <div class="constellation" data-reveal>
-      <canvas id="net" aria-label="Constellation of client sectors connected to ARAHNETS"></canvas>
+      <canvas id="net" aria-label="Konstelasi sektor klien yang terhubung dengan ARAHNETS"
+        data-i18n-aria="net.canvas"></canvas>
     </div>
-    <div class="logo-band" role="region" aria-label="Selected clients and partners" data-reveal>
-      <p class="logo-band-label mono">SELECTED CLIENTS &amp; PARTNERS</p>
+    <div class="logo-band" role="region" aria-label="Klien dan mitra terpilih" data-i18n-aria="net.bandAria"
+      data-reveal>
+      <p class="logo-band-label mono" data-i18n="net.band">SEBAGIAN KLIEN & MITRA KAMI</p>
       <div class="logo-belt">
         <div class="logo-track" id="logoTrack">
           <ul class="logo-set">
@@ -563,18 +634,19 @@ terminal.<span class="c-red">on</span>(<span class="c-red">"card_present"</span>
       <div class="hero-beam cta-beam"></div>
     </div>
     <div class="container cta-inner">
-      <span class="sec-label mono" data-reveal>[ 07 ] — DEPLOY</span>
-      <h2 class="display cta-title" data-reveal style="--d:.05s">Let's deploy<span class="red-solid">.</span></h2>
-      <p class="cta-sub" data-reveal style="--d:.12s">Tell us the size of your fleet. We'll handle everything between
-        purchase order and production — and keep it running after.</p>
+      <span class="sec-label mono" data-reveal data-i18n="cta.label">[ 07 ] — DEPLOY</span>
+      <h2 class="display cta-title" data-reveal style="--d:.05s"><span data-i18n="cta.title">Saatnya deploy</span><span
+          class="red-solid" data-i18n="p.dot">.</span></h2>
+      <p class="cta-sub" data-reveal style="--d:.12s" data-i18n="cta.sub">Beri tahu kami skala armada Anda. Kami tangani
+        semuanya di antara purchase order dan produksi — dan menjaganya tetap berjalan setelahnya.</p>
       <div class="cta-actions" data-reveal style="--d:.18s">
-        <a class="btn btn-red btn-lg" href="mailto:ada@arahnets.com">Request a consultation <span
-            class="arr">→</span></a>
+        <a class="btn btn-red btn-lg" href="mailto:ada@arahnets.com"><span data-i18n="cta.btn">Ajukan konsultasi</span>
+          <span class="arr">→</span></a>
       </div>
       <div class="cta-meta mono" data-reveal style="--d:.24s">
         <a href="mailto:ada@arahnets.com">ADA@ARAHNETS.COM</a>
-        <span class="sep">/</span><span>JAKARTA — INDONESIA</span>
-        <span class="sep">/</span><span>RESPONSE &lt; 1 BUSINESS DAY</span>
+        <span class="sep">/</span><span data-i18n="cta.loc">JAKARTA — INDONESIA</span>
+        <span class="sep">/</span><span data-i18n="cta.resp">RESPONS &lt; 1 HARI KERJA</span>
       </div>
     </div>
   </section>
@@ -584,38 +656,41 @@ terminal.<span class="c-red">on</span>(<span class="c-red">"card_present"</span>
     <div class="container footer-inner">
       <div class="footer-brand">
         <a class="logo" href="#top"><span class="logo-mark"></span><span class="logo-word">ARAHNETS</span></a>
-        <p class="footer-tag">Payment infrastructure, engineered.<br>Ingenico-certified partner since 2006.</p>
+        <p class="footer-tag" data-i18n-html="foot.tag">Infrastruktur pembayaran, direkayasa.<br>Mitra tersertifikasi
+          Ingenico sejak 2006.</p>
       </div>
       <div class="footer-cols">
         <div class="fcol">
-          <span class="fcol-h mono">STACK</span>
-          <a href="#services">Terminal EDC</a>
-          <a href="#services">EDC Rent</a>
-          <a href="#services">Field Services</a>
-          <a href="#software">Software Development</a>
+          <span class="fcol-h mono" data-i18n="foot.h1">LAYANAN</span>
+          <a href="#services" data-i18n="svc1.title">Terminal EDC</a>
+          <a href="#services" data-i18n="svc2.title">Sewa EDC</a>
+          <a href="#services" data-i18n="svc3.title">Layanan Lapangan</a>
+          <a href="#software" data-i18n="svc4.title">Pengembangan Software</a>
         </div>
         <div class="fcol">
-          <span class="fcol-h mono">COMPANY</span>
-          <a href="#credentials">Credentials</a>
-          <a href="#proof">Proof</a>
-          <a href="#network">Mitra &amp; Client</a>
-          <a href="#contact">Contact</a>
+          <span class="fcol-h mono" data-i18n="foot.h2">PERUSAHAAN</span>
+          <a href="#credentials" data-i18n="foot.c1">Kredensial</a>
+          <a href="#proof" data-i18n="foot.c2">Bukti</a>
+          <a href="#network" data-i18n="foot.c3">Mitra & Klien</a>
+          <a href="#contact" data-i18n="foot.c4">Kontak</a>
         </div>
         <div class="fcol">
-          <span class="fcol-h mono">STATUS</span>
-          <span class="fstatus mono"><span class="dot"></span>ALL TERMINALS OPERATIONAL</span>
-          <span class="fstatus-sub mono">MONITORED 24 / 7 / 365</span>
+          <span class="fcol-h mono" data-i18n="foot.h3">STATUS</span>
+          <span class="fstatus mono"><span class="dot"></span><span data-i18n="foot.status">SEMUA TERMINAL
+              BEROPERASI</span></span>
+          <span class="fstatus-sub mono" data-i18n="foot.mon">DIPANTAU 24 / 7 / 365</span>
         </div>
       </div>
     </div>
     <div class="container footer-base mono">
-      <span>© 2026 ARAHNETS. ALL RIGHTS RESERVED.</span>
-      <span>EST. 2006 — JAKARTA, ID</span>
+      <span data-i18n="foot.copy">© 2026 ARAHNETS. SELURUH HAK CIPTA DILINDUNGI.</span>
+      <span data-i18n="foot.est">SEJAK 2006 — JAKARTA, ID</span>
     </div>
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="js/main.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
