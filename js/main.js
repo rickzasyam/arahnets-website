@@ -225,7 +225,7 @@
       }
 
       // sector nodes + labels
-      ctx.font = "500 10px 'Inter', sans-serif";
+      ctx.font = "500 10px 'Plus Jakarta Sans', sans-serif";
       for (const n of nodes) {
         ctx.fillStyle = "rgba(17,17,17,.85)";
         ctx.beginPath(); ctx.arc(n.x, n.y, 3, 0, Math.PI * 2); ctx.fill();
@@ -246,7 +246,7 @@
       ctx.strokeStyle = "rgba(200,16,46,.14)";
       ctx.beginPath(); ctx.arc(cx, cy, 30 + Math.sin(t * 1.3) * 3, 0, Math.PI * 2); ctx.stroke();
       ctx.fillStyle = "#111111";
-      ctx.font = "600 11px 'Inter', sans-serif";
+      ctx.font = "600 11px 'Plus Jakarta Sans', sans-serif";
       ctx.textAlign = "center";
       ctx.fillText("ARAHNETS", cx, cy + 52);
 
@@ -268,6 +268,80 @@
       }
     }, { threshold: 0.05 });
     nio.observe(canvas);
+  }
+
+  /* ---------- client logo marquee ---------- */
+  const logoTrack = $("#logoTrack");
+  if (logoTrack) {
+    const belt = logoTrack.parentElement;
+    const baseSet = $(".logo-set", logoTrack);
+    const LOGO_SRC = "assets/client-logo/";
+    const SPEED = 40; // px per second — constant regardless of logo count
+    let marquee = null;
+
+    const esc = (s) => String(s).replace(/[&<>"']/g,
+      (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+    // rebuild the set from the generated manifest (falls back to hardcoded items)
+    const populate = (logos) => {
+      baseSet.innerHTML = logos.map((l) =>
+        `<li><img src="${LOGO_SRC}${esc(l.file)}" alt="${esc(l.alt || "")}" loading="lazy"></li>`
+      ).join("");
+    };
+
+    const buildMarquee = () => {
+      if (marquee) { marquee.kill(); marquee = null; }
+      $$(".logo-set", logoTrack).slice(1).forEach((s) => s.remove());
+      gsap.set(logoTrack, { x: 0 });
+      const setW = baseSet.offsetWidth;
+      if (!setW) return;
+      // clone the set until the belt stays covered at every scroll offset
+      const copies = Math.ceil(belt.clientWidth / setW) + 1;
+      for (let i = 0; i < copies; i++) {
+        const clone = baseSet.cloneNode(true);
+        clone.setAttribute("aria-hidden", "true");
+        logoTrack.appendChild(clone);
+      }
+      // translating by exactly one set width makes the repeat-snap invisible
+      marquee = gsap.to(logoTrack, {
+        x: -setW,
+        duration: setW / SPEED,
+        ease: "none",
+        repeat: -1,
+      });
+    };
+
+    const animate = () => {
+      // reduced motion or no GSAP → CSS shows a static, centered row
+      if (!window.gsap || reduced) return;
+      buildMarquee();
+
+      let rt;
+      addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(buildMarquee, 200); });
+
+      // glide to a stop on hover, resume on leave
+      belt.addEventListener("mouseenter", () => marquee && gsap.to(marquee, { timeScale: 0, duration: .5 }));
+      belt.addEventListener("mouseleave", () => marquee && gsap.to(marquee, { timeScale: 1, duration: .5 }));
+
+      // don't spend frames offscreen
+      const mio = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (!marquee) continue;
+          e.isIntersecting ? marquee.play() : marquee.pause();
+        }
+      }, { threshold: 0 });
+      mio.observe(belt);
+    };
+
+    const measureThenAnimate = () =>
+      Promise.all($$("img", baseSet).map((im) => im.decode().catch(() => {}))).then(animate);
+
+    // logos.json is the source of truth; the markup carries a no-JS fallback
+    fetch(LOGO_SRC + "logos.json", { cache: "no-cache" })
+      .then((r) => (r.ok ? r.json() : Promise.reject()))
+      .then((logos) => { if (Array.isArray(logos) && logos.length) populate(logos); })
+      .catch(() => {})
+      .finally(measureThenAnimate);
   }
 
   onScroll();

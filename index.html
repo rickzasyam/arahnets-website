@@ -1,286 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ARAHNETS — Payment Infrastructure, Engineered · EDC Terminals · Rental · Field Services · Software</title>
-<meta name="description" content="ARAHNETS is an Ingenico-certified payment technology partner since 2006 — EDC terminal procurement, rental, field maintenance and terminal software development for enterprises across Indonesia.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='8' y='8' width='16' height='16' fill='%23C8102E' transform='rotate(45 16 16)'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ARAHNETS — Payment Infrastructure, Engineered · EDC Terminals · Rental · Field Services · Software</title>
+  <meta name="description"
+    content="ARAHNETS is an Ingenico-certified payment technology partner since 2006 — EDC terminal procurement, rental, field maintenance and terminal software development for enterprises across Indonesia.">
+  <link rel="icon"
+    type="image/png" href="assets/icon.png"">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body id="top">
 
-<!-- scroll progress -->
-<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <!-- scroll progress -->
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
 
-<!-- loader -->
-<div class="loader" id="loader" aria-hidden="true">
-  <div class="loader-inner">
-    <span class="loader-mark"></span>
-    <span class="loader-word">ARAHNETS</span>
-    <span class="loader-status mono">ESTABLISHING SECURE SESSION</span>
-    <span class="loader-track"><span class="loader-fill"></span></span>
-  </div>
-</div>
-
-<!-- nav -->
-<nav class="nav" id="nav">
-  <div class="nav-inner">
-    <a class="logo" href="#top" aria-label="ARAHNETS home">
-      <span class="logo-mark" aria-hidden="true"></span>
-      <span class="logo-word">ARAHNETS</span>
-    </a>
-    <div class="nav-links" aria-label="Primary">
-      <a href="#services">Services</a>
-      <a href="#proof">Proof</a>
-      <a href="#process">Process</a>
-      <a href="#software">Software</a>
-      <a href="#network">Network</a>
-    </div>
-    <a href="#contact" class="btn btn-red btn-sm">Deploy with us</a>
-  </div>
-</nav>
-
-<!-- ============ HERO ============ -->
-<header class="hero">
-  <div class="hero-bg" aria-hidden="true">
-    <div class="hero-grid"></div>
-    <div class="hero-glow"></div>
-    <div class="hero-beam"></div>
-    <div class="hero-beam hero-beam-2"></div>
-    <div class="hero-watermark mono">EST — 2006</div>
-  </div>
-
-  <div class="hero-inner">
-    <div class="hero-copy">
-      <p class="eyebrow mono"><span class="dot" aria-hidden="true"></span>INGENICO CERTIFIED PARTNER &nbsp;·&nbsp; SINCE 2006</p>
-      <h1 class="display">
-        <span class="hl"><span class="hl-in">Payment</span></span>
-        <span class="hl"><span class="hl-in">infrastructure<span class="red">,</span></span></span>
-        <span class="hl"><span class="hl-in">engineered<span class="red-solid">.</span></span></span>
-      </h1>
-      <p class="hero-sub">ARAHNETS procures, rents, maintains and programs EDC terminal fleets for enterprises that cannot afford a failed transaction. One certified partner — from purchase order to production.</p>
-      <div class="hero-cta">
-        <a href="#contact" class="btn btn-red">Start a deployment <span class="arr" aria-hidden="true">→</span></a>
-        <a href="#services" class="btn btn-ghost">Explore services</a>
-      </div>
-      <div class="hero-meta mono">
-        <span>20 YRS OPERATING</span><span class="sep">/</span>
-        <span>15,000+ TERMINALS</span><span class="sep">/</span>
-        <span>99.98% UPTIME</span>
-      </div>
-    </div>
-
-    <div class="hero-visual" id="heroVisual">
-      <!-- EDC terminal -->
-      <div class="hcard hcard-terminal" data-p="10">
-        <svg viewBox="0 0 260 420" width="260" height="420" role="img" aria-label="Ingenico EDC payment terminal showing an approved transaction">
-          <defs>
-            <linearGradient id="scr" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#111114"/><stop offset="1" stop-color="#0A0A0C"/>
-            </linearGradient>
-          </defs>
-          <!-- body -->
-          <rect x="6" y="6" width="248" height="408" rx="26" fill="#161619" stroke="rgba(255,255,255,.09)"/>
-          <rect x="6" y="6" width="248" height="408" rx="26" fill="none" stroke="rgba(255,255,255,.04)" stroke-width="6"/>
-          <!-- receipt slot -->
-          <rect x="70" y="18" width="120" height="5" rx="2.5" fill="#0B0B0D"/>
-          <!-- status led -->
-          <circle cx="232" cy="22" r="3.5" fill="#C8102E" class="led"/>
-          <!-- screen -->
-          <rect x="26" y="38" width="208" height="148" rx="10" fill="url(#scr)" stroke="rgba(255,255,255,.08)"/>
-          <text x="40" y="62" class="svg-mono" font-size="9" fill="rgba(255,255,255,.45)" letter-spacing="2">ARAHNETS PAY</text>
-          <text x="220" y="62" class="svg-mono" font-size="9" fill="#D64B5E" text-anchor="end" letter-spacing="1">●&#8201;LIVE</text>
-          <text x="40" y="104" class="svg-disp" font-size="24" font-weight="600" fill="#FFFFFF">Rp 2.450.000</text>
-          <text x="40" y="124" class="svg-mono" font-size="9" fill="rgba(255,255,255,.4)" letter-spacing="1.5">VISA ···· 4021 — CONTACTLESS</text>
-          <!-- approved row -->
-          <circle cx="48" cy="156" r="9" fill="none" stroke="#D64B5E" stroke-width="1.6"/>
-          <path d="M43.6 156 l3.2 3.4 6-6.6" fill="none" stroke="#D64B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          <text x="66" y="160" class="svg-mono" font-size="11" fill="#FFFFFF" letter-spacing="2.5">APPROVED</text>
-          <text x="220" y="160" class="svg-mono" font-size="9" fill="rgba(255,255,255,.4)" text-anchor="end">0.9s</text>
-          <!-- keypad -->
-          <g class="keypad">
-            <rect x="26"  y="206" width="62" height="38" rx="7"/><rect x="99"  y="206" width="62" height="38" rx="7"/><rect x="172" y="206" width="62" height="38" rx="7"/>
-            <rect x="26"  y="252" width="62" height="38" rx="7"/><rect x="99"  y="252" width="62" height="38" rx="7"/><rect x="172" y="252" width="62" height="38" rx="7"/>
-            <rect x="26"  y="298" width="62" height="38" rx="7"/><rect x="99"  y="298" width="62" height="38" rx="7"/><rect x="172" y="298" width="62" height="38" rx="7"/>
-            <rect x="26"  y="344" width="62" height="38" rx="7"/><rect x="99"  y="344" width="62" height="38" rx="7"/>
-          </g>
-          <g class="svg-mono" font-size="12" fill="rgba(255,255,255,.55)" text-anchor="middle">
-            <text x="57" y="230">1</text><text x="130" y="230">2</text><text x="203" y="230">3</text>
-            <text x="57" y="276">4</text><text x="130" y="276">5</text><text x="203" y="276">6</text>
-            <text x="57" y="322">7</text><text x="130" y="322">8</text><text x="203" y="322">9</text>
-            <text x="57" y="368">✕</text><text x="130" y="368">0</text>
-          </g>
-          <rect x="172" y="344" width="62" height="38" rx="7" fill="#C8102E"/>
-          <text x="203" y="368" class="svg-mono" font-size="11" fill="#FFFFFF" text-anchor="middle" font-weight="700">⏎</text>
-          <!-- card slot -->
-          <rect x="70" y="398" width="120" height="6" rx="3" fill="#0B0B0D"/>
-        </svg>
-        <span class="hcard-tag mono">INGENICO · EMV L1/L2</span>
-      </div>
-
-      <!-- live feed -->
-      <div class="hcard hcard-feed" data-p="22">
-        <div class="feed-head mono"><span><span class="dot"></span>LIVE ACQUIRING FEED</span><span class="feed-tps">— TPS 41.2</span></div>
-        <ul class="feed" id="feed" aria-live="off"></ul>
-      </div>
-
-      <!-- uptime chip -->
-      <div class="chip chip-uptime mono" data-p="34"><span class="dot"></span>FLEET UPTIME&nbsp;<strong>99.98%</strong></div>
-      <!-- latency chip -->
-      <div class="chip chip-latency mono" data-p="30">AUTH LATENCY&nbsp;<strong>212ms</strong></div>
+  <!-- loader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-mark"></span>
+      <span class="loader-word">ARAHNETS</span>
+      <span class="loader-status mono">ESTABLISHING SECURE SESSION</span>
+      <span class="loader-track"><span class="loader-fill"></span></span>
     </div>
   </div>
 
-  <a class="scroll-cue mono" href="#credentials">SCROLL<span class="cue-line" aria-hidden="true"></span></a>
-</header>
+  <!-- nav -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="logo" href="#top" aria-label="ARAHNETS home">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="logo-word">
+          <img src="assets/arahnets_black.png" alt="ARAHNETS" style="height: 40px; width: auto;">
+        </span>
+      </a>
+      <div class="nav-links" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#proof">Proof</a>
+        <a href="#process">Process</a>
+        <a href="#software">Software</a>
+        <a href="#network">Network</a>
+      </div>
+      <a href="#contact" class="btn btn-red btn-sm">Deploy with us</a>
+    </div>
+  </nav>
 
-<!-- ticker -->
-<div class="ticker-wrap" aria-hidden="true">
-  <div class="ticker">
-    <div class="ticker-track">
-      <span class="ticker-set">
-        <span>INGENICO CERTIFIED</span><i>◆</i><span>EST. 2006</span><i>◆</i><span>TERMINAL PROCUREMENT</span><i>◆</i><span>EDC RENTAL</span><i>◆</i><span>FIELD MAINTENANCE</span><i>◆</i><span>EDC SOFTWARE DEVELOPMENT</span><i>◆</i><span>NATIONWIDE COVERAGE</span><i>◆</i>
-      </span>
-      <span class="ticker-set">
-        <span>INGENICO CERTIFIED</span><i>◆</i><span>EST. 2006</span><i>◆</i><span>TERMINAL PROCUREMENT</span><i>◆</i><span>EDC RENTAL</span><i>◆</i><span>FIELD MAINTENANCE</span><i>◆</i><span>EDC SOFTWARE DEVELOPMENT</span><i>◆</i><span>NATIONWIDE COVERAGE</span><i>◆</i>
-      </span>
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-grid"></div>
+      <div class="hero-glow"></div>
+      <div class="hero-beam"></div>
+      <div class="hero-beam hero-beam-2"></div>
+      <div class="hero-watermark mono">EST — 2006</div>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow mono"><span class="dot" aria-hidden="true"></span>INGENICO CERTIFIED PARTNER &nbsp;·&nbsp;
+          SINCE 2006</p>
+        <h1 class="display">
+          <span class="hl"><span class="hl-in">Payment</span></span>
+          <span class="hl"><span class="hl-in">infrastructure<span class="red">,</span></span></span>
+          <span class="hl"><span class="hl-in">engineered<span class="red-solid">.</span></span></span>
+        </h1>
+        <p class="hero-sub">ARAHNETS procures, rents, maintains and programs EDC terminal fleets for enterprises that
+          cannot afford a failed transaction. One certified partner — from purchase order to production.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-red">Start a deployment <span class="arr" aria-hidden="true">→</span></a>
+          <a href="#services" class="btn btn-ghost">Explore services</a>
+        </div>
+        <div class="hero-meta mono">
+          <span>20 YRS OPERATING</span><span class="sep">/</span>
+          <span>15,000+ TERMINALS</span><span class="sep">/</span>
+          <span>99.98% UPTIME</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" id="heroVisual">
+        <!-- EDC terminal -->
+        <div class="hcard hcard-terminal" data-p="10">
+          <svg viewBox="0 0 260 420" width="260" height="420" role="img"
+            aria-label="Ingenico EDC payment terminal showing an approved transaction">
+            <defs>
+              <linearGradient id="scr" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#111114" />
+                <stop offset="1" stop-color="#0A0A0C" />
+              </linearGradient>
+            </defs>
+            <!-- body -->
+            <rect x="6" y="6" width="248" height="408" rx="26" fill="#161619" stroke="rgba(255,255,255,.09)" />
+            <rect x="6" y="6" width="248" height="408" rx="26" fill="none" stroke="rgba(255,255,255,.04)"
+              stroke-width="6" />
+            <!-- receipt slot -->
+            <rect x="70" y="18" width="120" height="5" rx="2.5" fill="#0B0B0D" />
+            <!-- status led -->
+            <circle cx="232" cy="22" r="3.5" fill="#C8102E" class="led" />
+            <!-- screen -->
+            <rect x="26" y="38" width="208" height="148" rx="10" fill="url(#scr)" stroke="rgba(255,255,255,.08)" />
+            <text x="40" y="62" class="svg-mono" font-size="9" fill="rgba(255,255,255,.45)" letter-spacing="2">ARAHNETS
+              PAY</text>
+            <text x="220" y="62" class="svg-mono" font-size="9" fill="#D64B5E" text-anchor="end"
+              letter-spacing="1">●&#8201;LIVE</text>
+            <text x="40" y="104" class="svg-disp" font-size="24" font-weight="600" fill="#FFFFFF">Rp 2.450.000</text>
+            <text x="40" y="124" class="svg-mono" font-size="9" fill="rgba(255,255,255,.4)" letter-spacing="1.5">VISA
+              ···· 4021 — CONTACTLESS</text>
+            <!-- approved row -->
+            <circle cx="48" cy="156" r="9" fill="none" stroke="#D64B5E" stroke-width="1.6" />
+            <path d="M43.6 156 l3.2 3.4 6-6.6" fill="none" stroke="#D64B5E" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <text x="66" y="160" class="svg-mono" font-size="11" fill="#FFFFFF" letter-spacing="2.5">APPROVED</text>
+            <text x="220" y="160" class="svg-mono" font-size="9" fill="rgba(255,255,255,.4)"
+              text-anchor="end">0.9s</text>
+            <!-- keypad -->
+            <g class="keypad">
+              <rect x="26" y="206" width="62" height="38" rx="7" />
+              <rect x="99" y="206" width="62" height="38" rx="7" />
+              <rect x="172" y="206" width="62" height="38" rx="7" />
+              <rect x="26" y="252" width="62" height="38" rx="7" />
+              <rect x="99" y="252" width="62" height="38" rx="7" />
+              <rect x="172" y="252" width="62" height="38" rx="7" />
+              <rect x="26" y="298" width="62" height="38" rx="7" />
+              <rect x="99" y="298" width="62" height="38" rx="7" />
+              <rect x="172" y="298" width="62" height="38" rx="7" />
+              <rect x="26" y="344" width="62" height="38" rx="7" />
+              <rect x="99" y="344" width="62" height="38" rx="7" />
+            </g>
+            <g class="svg-mono" font-size="12" fill="rgba(255,255,255,.55)" text-anchor="middle">
+              <text x="57" y="230">1</text><text x="130" y="230">2</text><text x="203" y="230">3</text>
+              <text x="57" y="276">4</text><text x="130" y="276">5</text><text x="203" y="276">6</text>
+              <text x="57" y="322">7</text><text x="130" y="322">8</text><text x="203" y="322">9</text>
+              <text x="57" y="368">✕</text><text x="130" y="368">0</text>
+            </g>
+            <rect x="172" y="344" width="62" height="38" rx="7" fill="#C8102E" />
+            <text x="203" y="368" class="svg-mono" font-size="11" fill="#FFFFFF" text-anchor="middle"
+              font-weight="700">⏎</text>
+            <!-- card slot -->
+            <rect x="70" y="398" width="120" height="6" rx="3" fill="#0B0B0D" />
+          </svg>
+          <span class="hcard-tag mono">INGENICO · EMV L1/L2</span>
+        </div>
+
+        <!-- live feed -->
+        <div class="hcard hcard-feed" data-p="22">
+          <div class="feed-head mono"><span><span class="dot"></span>LIVE ACQUIRING FEED</span><span class="feed-tps">—
+              TPS 41.2</span></div>
+          <ul class="feed" id="feed" aria-live="off"></ul>
+        </div>
+
+        <!-- uptime chip -->
+        <div class="chip chip-uptime mono" data-p="34"><span class="dot"></span>FLEET
+          UPTIME&nbsp;<strong>99.98%</strong></div>
+        <!-- latency chip -->
+        <div class="chip chip-latency mono" data-p="30">AUTH LATENCY&nbsp;<strong>212ms</strong></div>
+      </div>
+    </div>
+
+    <a class="scroll-cue mono" href="#credentials">SCROLL<span class="cue-line" aria-hidden="true"></span></a>
+  </header>
+
+  <!-- ticker -->
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <div class="ticker-track">
+        <span class="ticker-set">
+          <span>INGENICO CERTIFIED</span><i>◆</i><span>EST. 2006</span><i>◆</i><span>TERMINAL
+            PROCUREMENT</span><i>◆</i><span>EDC RENTAL</span><i>◆</i><span>FIELD MAINTENANCE</span><i>◆</i><span>EDC
+            SOFTWARE DEVELOPMENT</span><i>◆</i><span>NATIONWIDE COVERAGE</span><i>◆</i>
+        </span>
+        <span class="ticker-set">
+          <span>INGENICO CERTIFIED</span><i>◆</i><span>EST. 2006</span><i>◆</i><span>TERMINAL
+            PROCUREMENT</span><i>◆</i><span>EDC RENTAL</span><i>◆</i><span>FIELD MAINTENANCE</span><i>◆</i><span>EDC
+            SOFTWARE DEVELOPMENT</span><i>◆</i><span>NATIONWIDE COVERAGE</span><i>◆</i>
+        </span>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- ============ 01 CREDENTIALS ============ -->
-<section class="section credentials" id="credentials">
-  <div class="container">
-    <div class="section-head" data-reveal>
-      <span class="sec-label mono">[ 01 ] — CREDENTIALS</span>
+  <!-- ============ 01 CREDENTIALS ============ -->
+  <section class="section credentials" id="credentials">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="sec-label mono">[ 01 ] — CREDENTIALS</span>
+      </div>
+      <div class="cred-grid">
+        <div class="cred-copy">
+          <h2 class="statement" data-reveal>
+            Certified by <em>Ingenico</em>.<br>
+            Operating since <em>2006</em>.<br>
+            Trusted where a failed<br class="bp">
+            transaction is not an option<span class="red-solid">.</span>
+          </h2>
+          <p class="lede" data-reveal style="--d:.1s">Certification is not a badge to us — it is an operating standard.
+            Two decades of procurement discipline, field rigor and terminal-level engineering, audited against the
+            hardware we deploy.</p>
+          <ul class="cred-chips mono" data-reveal style="--d:.18s">
+            <li>EMV L1 / L2 DEVICES</li>
+            <li>SECURE KEY INJECTION</li>
+            <li>PCI-ALIGNED HANDLING</li>
+            <li>NATIONWIDE FIELD OPS</li>
+          </ul>
+        </div>
+        <div class="cred-card-wrap" data-reveal style="--d:.15s">
+          <div class="cred-card">
+            <div class="cred-card-top mono"><span>CERTIFIED PARTNER</span><span class="dot"></span></div>
+            <div class="cred-card-brand">INGENICO</div>
+            <dl class="cred-rows mono">
+              <div>
+                <dt>PARTNER</dt>
+                <dd>ARAHNETS</dd>
+              </div>
+              <div>
+                <dt>SINCE</dt>
+                <dd>2006</dd>
+              </div>
+              <div>
+                <dt>SCOPE</dt>
+                <dd>PROCUREMENT · RENTAL · FIELD · SOFTWARE</dd>
+              </div>
+              <div>
+                <dt>STATUS</dt>
+                <dd class="red">● ACTIVE</dd>
+              </div>
+            </dl>
+            <div class="cred-card-foot mono">AUTH — ID · 2006 → PRESENT</div>
+          </div>
+          <div class="cred-card-shadow" aria-hidden="true"></div>
+        </div>
+      </div>
     </div>
-    <div class="cred-grid">
-      <div class="cred-copy">
-        <h2 class="statement" data-reveal>
-          Certified by <em>Ingenico</em>.<br>
-          Operating since <em>2006</em>.<br>
-          Trusted where a failed<br class="bp">
-          transaction is not an option<span class="red-solid">.</span>
-        </h2>
-        <p class="lede" data-reveal style="--d:.1s">Certification is not a badge to us — it is an operating standard. Two decades of procurement discipline, field rigor and terminal-level engineering, audited against the hardware we deploy.</p>
-        <ul class="cred-chips mono" data-reveal style="--d:.18s">
-          <li>EMV L1 / L2 DEVICES</li>
-          <li>SECURE KEY INJECTION</li>
-          <li>PCI-ALIGNED HANDLING</li>
-          <li>NATIONWIDE FIELD OPS</li>
-        </ul>
-      </div>
-      <div class="cred-card-wrap" data-reveal style="--d:.15s">
-        <div class="cred-card">
-          <div class="cred-card-top mono"><span>CERTIFIED PARTNER</span><span class="dot"></span></div>
-          <div class="cred-card-brand">INGENICO</div>
-          <dl class="cred-rows mono">
-            <div><dt>PARTNER</dt><dd>ARAHNETS</dd></div>
-            <div><dt>SINCE</dt><dd>2006</dd></div>
-            <div><dt>SCOPE</dt><dd>PROCUREMENT · RENTAL · FIELD · SOFTWARE</dd></div>
-            <div><dt>STATUS</dt><dd class="red">● ACTIVE</dd></div>
-          </dl>
-          <div class="cred-card-foot mono">AUTH — ID · 2006 → PRESENT</div>
-        </div>
-        <div class="cred-card-shadow" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============ 02 SERVICES ============ -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="sec-label mono">[ 02 ] — CAPABILITIES</span>
+        <h2 class="section-title">Four modules.<br>One payment stack<span class="red-solid">.</span></h2>
+        <p class="section-sub">Not a menu of services — an integrated stack. Each module runs standalone or as part of a
+          fully managed terminal estate.</p>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ============ 02 SERVICES ============ -->
-<section class="section services" id="services">
-  <div class="container">
-    <div class="section-head" data-reveal>
-      <span class="sec-label mono">[ 02 ] — CAPABILITIES</span>
-      <h2 class="section-title">Four modules.<br>One payment stack<span class="red-solid">.</span></h2>
-      <p class="section-sub">Not a menu of services — an integrated stack. Each module runs standalone or as part of a fully managed terminal estate.</p>
+    <div class="stack" id="stack">
+      <article class="svc" style="--i:0">
+        <div class="svc-inner container">
+          <div class="svc-main">
+            <div class="svc-topline mono"><span class="svc-idx">01</span><span class="svc-tag">MODULE — TRM·01</span>
+            </div>
+            <h3 class="svc-title">Terminal EDC</h3>
+            <p class="svc-tagline">Own the hardware layer.</p>
+            <p class="svc-desc">Procurement and provisioning of certified Ingenico terminal fleets — sourced,
+              configured, key-injected and delivered deployment-ready to every branch, counter and courier.</p>
+            <a class="svc-link" href="#contact">Configure a fleet <span class="arr">→</span></a>
+          </div>
+          <div class="svc-specs mono">
+            <div class="spec"><span>DEVICES</span><b>INGENICO LINEUP — COUNTERTOP / MOBILE / ANDROID</b></div>
+            <div class="spec"><span>SECURITY</span><b>EMV L1/L2 · SECURE KEY INJECTION</b></div>
+            <div class="spec"><span>PROVISIONING</span><b>PRE-STAGED PROFILES PER ACQUIRER</b></div>
+            <div class="spec"><span>LOGISTICS</span><b>NATIONWIDE DELIVERY &amp; ASSET TAGGING</b></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="svc" style="--i:1">
+        <div class="svc-inner container">
+          <div class="svc-main">
+            <div class="svc-topline mono"><span class="svc-idx">02</span><span class="svc-tag">MODULE — RNT·02</span>
+            </div>
+            <h3 class="svc-title">EDC Rent</h3>
+            <p class="svc-tagline">Fleet capacity without capital expense.</p>
+            <p class="svc-desc">Rental programs that flex with your volume — seasonal peaks, events, pilots or full
+              estates. Managed devices, managed swaps, one predictable line item.</p>
+            <a class="svc-link" href="#contact">Scale on demand <span class="arr">→</span></a>
+          </div>
+          <div class="svc-specs mono">
+            <div class="spec"><span>TERMS</span><b>MONTHLY · SEASONAL · MULTI-YEAR</b></div>
+            <div class="spec"><span>COVERAGE</span><b>SLA-BACKED REPLACEMENT UNITS</b></div>
+            <div class="spec"><span>SCALING</span><b>EVENT &amp; PEAK-SEASON SURGE FLEETS</b></div>
+            <div class="spec"><span>BILLING</span><b>OPEX — ZERO ASSET RISK</b></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="svc" style="--i:2">
+        <div class="svc-inner container">
+          <div class="svc-main">
+            <div class="svc-topline mono"><span class="svc-idx">03</span><span class="svc-tag">MODULE — FLD·03</span>
+            </div>
+            <h3 class="svc-title">Field Services</h3>
+            <p class="svc-tagline">Uptime is a discipline, not a promise.</p>
+            <p class="svc-desc">Preventive maintenance, corrective repair and first-line response across the estate —
+              technicians, spare-part logistics and swap stock engineered around your SLA.</p>
+            <a class="svc-link" href="#contact">Protect your uptime <span class="arr">→</span></a>
+          </div>
+          <div class="svc-specs mono">
+            <div class="spec"><span>MAINTENANCE</span><b>PREVENTIVE CYCLES &amp; HEALTH CHECKS</b></div>
+            <div class="spec"><span>REPAIR</span><b>CORRECTIVE + DEPOT-LEVEL SERVICE</b></div>
+            <div class="spec"><span>RESPONSE</span><b>FIRST-LINE ON-SITE INTERVENTION</b></div>
+            <div class="spec"><span>PARTS</span><b>MANAGED SPARE &amp; SWAP INVENTORY</b></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="svc" style="--i:3">
+        <div class="svc-inner container">
+          <div class="svc-main">
+            <div class="svc-topline mono"><span class="svc-idx">04</span><span class="svc-tag">MODULE — SWD·04</span>
+            </div>
+            <h3 class="svc-title">Software Development</h3>
+            <p class="svc-tagline">The terminal is a platform. We program it.</p>
+            <p class="svc-desc">Custom EDC applications built directly on the terminal OS — payment flows, host
+              integration, loyalty, QR and remote update pipelines shipped to thousands of devices at once.</p>
+            <a class="svc-link" href="#software">See it running <span class="arr">→</span></a>
+          </div>
+          <div class="svc-specs mono">
+            <div class="spec"><span>PLATFORMS</span><b>TELIUM &amp; ANDROID EDC</b></div>
+            <div class="spec"><span>INTEGRATION</span><b>ISO 8583 HOST &amp; SWITCHING</b></div>
+            <div class="spec"><span>FEATURES</span><b>QRIS · LOYALTY · MULTI-ACQUIRER</b></div>
+            <div class="spec"><span>DELIVERY</span><b>REMOTE FLEET UPDATE PIPELINE</b></div>
+          </div>
+        </div>
+      </article>
     </div>
-  </div>
+  </section>
 
-  <div class="stack" id="stack">
-    <article class="svc" style="--i:0">
-      <div class="svc-inner container">
-        <div class="svc-main">
-          <div class="svc-topline mono"><span class="svc-idx">01</span><span class="svc-tag">MODULE — TRM·01</span></div>
-          <h3 class="svc-title">Terminal EDC</h3>
-          <p class="svc-tagline">Own the hardware layer.</p>
-          <p class="svc-desc">Procurement and provisioning of certified Ingenico terminal fleets — sourced, configured, key-injected and delivered deployment-ready to every branch, counter and courier.</p>
-          <a class="svc-link" href="#contact">Configure a fleet <span class="arr">→</span></a>
-        </div>
-        <div class="svc-specs mono">
-          <div class="spec"><span>DEVICES</span><b>INGENICO LINEUP — COUNTERTOP / MOBILE / ANDROID</b></div>
-          <div class="spec"><span>SECURITY</span><b>EMV L1/L2 · SECURE KEY INJECTION</b></div>
-          <div class="spec"><span>PROVISIONING</span><b>PRE-STAGED PROFILES PER ACQUIRER</b></div>
-          <div class="spec"><span>LOGISTICS</span><b>NATIONWIDE DELIVERY &amp; ASSET TAGGING</b></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="svc" style="--i:1">
-      <div class="svc-inner container">
-        <div class="svc-main">
-          <div class="svc-topline mono"><span class="svc-idx">02</span><span class="svc-tag">MODULE — RNT·02</span></div>
-          <h3 class="svc-title">EDC Rent</h3>
-          <p class="svc-tagline">Fleet capacity without capital expense.</p>
-          <p class="svc-desc">Rental programs that flex with your volume — seasonal peaks, events, pilots or full estates. Managed devices, managed swaps, one predictable line item.</p>
-          <a class="svc-link" href="#contact">Scale on demand <span class="arr">→</span></a>
-        </div>
-        <div class="svc-specs mono">
-          <div class="spec"><span>TERMS</span><b>MONTHLY · SEASONAL · MULTI-YEAR</b></div>
-          <div class="spec"><span>COVERAGE</span><b>SLA-BACKED REPLACEMENT UNITS</b></div>
-          <div class="spec"><span>SCALING</span><b>EVENT &amp; PEAK-SEASON SURGE FLEETS</b></div>
-          <div class="spec"><span>BILLING</span><b>OPEX — ZERO ASSET RISK</b></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="svc" style="--i:2">
-      <div class="svc-inner container">
-        <div class="svc-main">
-          <div class="svc-topline mono"><span class="svc-idx">03</span><span class="svc-tag">MODULE — FLD·03</span></div>
-          <h3 class="svc-title">Field Services</h3>
-          <p class="svc-tagline">Uptime is a discipline, not a promise.</p>
-          <p class="svc-desc">Preventive maintenance, corrective repair and first-line response across the estate — technicians, spare-part logistics and swap stock engineered around your SLA.</p>
-          <a class="svc-link" href="#contact">Protect your uptime <span class="arr">→</span></a>
-        </div>
-        <div class="svc-specs mono">
-          <div class="spec"><span>MAINTENANCE</span><b>PREVENTIVE CYCLES &amp; HEALTH CHECKS</b></div>
-          <div class="spec"><span>REPAIR</span><b>CORRECTIVE + DEPOT-LEVEL SERVICE</b></div>
-          <div class="spec"><span>RESPONSE</span><b>FIRST-LINE ON-SITE INTERVENTION</b></div>
-          <div class="spec"><span>PARTS</span><b>MANAGED SPARE &amp; SWAP INVENTORY</b></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="svc" style="--i:3">
-      <div class="svc-inner container">
-        <div class="svc-main">
-          <div class="svc-topline mono"><span class="svc-idx">04</span><span class="svc-tag">MODULE — SWD·04</span></div>
-          <h3 class="svc-title">Software Development</h3>
-          <p class="svc-tagline">The terminal is a platform. We program it.</p>
-          <p class="svc-desc">Custom EDC applications built directly on the terminal OS — payment flows, host integration, loyalty, QR and remote update pipelines shipped to thousands of devices at once.</p>
-          <a class="svc-link" href="#software">See it running <span class="arr">→</span></a>
-        </div>
-        <div class="svc-specs mono">
-          <div class="spec"><span>PLATFORMS</span><b>TELIUM &amp; ANDROID EDC</b></div>
-          <div class="spec"><span>INTEGRATION</span><b>ISO 8583 HOST &amp; SWITCHING</b></div>
-          <div class="spec"><span>FEATURES</span><b>QRIS · LOYALTY · MULTI-ACQUIRER</b></div>
-          <div class="spec"><span>DELIVERY</span><b>REMOTE FLEET UPDATE PIPELINE</b></div>
-        </div>
-      </div>
-    </article>
-  </div>
-</section>
-
-<!-- ============ 03 PROOF (metrics, angled band) ============ -->
-<section class="proof" id="proof">
-  <div class="proof-band" aria-hidden="true"></div>
-  <div class="proof-content container">
+  <!-- ============ 03 PROOF (metrics, angled band) ============ -->
+  <section class="proof" id="proof">
+    <div class="proof-band" aria-hidden="true"></div>
+    <div class="proof-content container">
       <div class="section-head" data-reveal>
         <span class="sec-label mono">[ 03 ] — PROOF</span>
         <h2 class="section-title">Measured, not marketed<span class="red-solid">.</span></h2>
@@ -289,7 +344,8 @@
         <div class="metric" data-reveal>
           <span class="metric-num"><span class="count" data-count="20">0</span></span>
           <span class="metric-label mono">YEARS OPERATING</span>
-          <p class="metric-desc">Continuous operation since 2006 — through every network migration and card-scheme mandate.</p>
+          <p class="metric-desc">Continuous operation since 2006 — through every network migration and card-scheme
+            mandate.</p>
         </div>
         <div class="metric" data-reveal style="--d:.08s">
           <span class="metric-num"><span class="count" data-count="15000" data-format="comma">0</span>+</span>
@@ -299,7 +355,8 @@
         <div class="metric" data-reveal style="--d:.16s">
           <span class="metric-num"><span class="count" data-count="12">0</span></span>
           <span class="metric-label mono">CLIENT SECTORS</span>
-          <p class="metric-desc">Banking, retail, F&amp;B, fuel, logistics, hospitality and more — one estate standard.</p>
+          <p class="metric-desc">Banking, retail, F&amp;B, fuel, logistics, hospitality and more — one estate standard.
+          </p>
         </div>
         <div class="metric" data-reveal style="--d:.24s">
           <span class="metric-num"><span class="count" data-count="99.98" data-decimals="2">0</span>%</span>
@@ -308,99 +365,132 @@
         </div>
       </div>
     </div>
-</section>
+  </section>
 
-<!-- ============ 04 PROCESS ============ -->
-<section class="section process" id="process">
-  <div class="container">
-    <div class="section-head" data-reveal>
-      <span class="sec-label mono">[ 04 ] — PATHWAY</span>
-      <h2 class="section-title">From inquiry<br>to infrastructure<span class="red-solid">.</span></h2>
-      <p class="section-sub">A deployment is not a delivery — it is a sequence. Every ARAHNETS engagement runs the same engineered pathway.</p>
-    </div>
-
-    <div class="steps" id="steps">
-      <div class="steps-rail" aria-hidden="true"><span id="railFill"></span></div>
-
-      <div class="step" data-reveal>
-        <span class="step-idx mono">STEP — 01</span>
-        <h3 class="step-title">Consult</h3>
-        <p class="step-desc">We scope the estate: transaction volume, acquirer relationships, sites, connectivity and SLA targets. You get a fleet design, not a quotation template.</p>
-        <div class="step-chips mono"><span>FLEET SIZING</span><span>ACQUIRER MAP</span><span>SLA TARGETS</span></div>
+  <!-- ============ 04 PROCESS ============ -->
+  <section class="section process" id="process">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="sec-label mono">[ 04 ] — PATHWAY</span>
+        <h2 class="section-title">From inquiry<br>to infrastructure<span class="red-solid">.</span></h2>
+        <p class="section-sub">A deployment is not a delivery — it is a sequence. Every ARAHNETS engagement runs the
+          same engineered pathway.</p>
       </div>
 
-      <div class="step" data-reveal style="--d:.06s">
-        <span class="step-idx mono">STEP — 02</span>
-        <h3 class="step-title">Provision</h3>
-        <p class="step-desc">Terminals are sourced, configured and key-injected under certified handling. Profiles are pre-staged per acquirer so devices arrive transaction-ready.</p>
-        <div class="step-chips mono"><span>KEY INJECTION</span><span>PROFILE STAGING</span><span>ASSET TAGGING</span></div>
-      </div>
+      <div class="steps" id="steps">
+        <div class="steps-rail" aria-hidden="true"><span id="railFill"></span></div>
 
-      <div class="step" data-reveal style="--d:.12s">
-        <span class="step-idx mono">STEP — 03</span>
-        <h3 class="step-title">Deploy</h3>
-        <p class="step-desc">Nationwide rollout with on-site installation, merchant training and first-transaction verification at every point of acceptance.</p>
-        <div class="step-chips mono"><span>ON-SITE INSTALL</span><span>TRAINING</span><span>LIVE VERIFICATION</span></div>
-      </div>
-
-      <div class="step" data-reveal style="--d:.18s">
-        <span class="step-idx mono">STEP — 04</span>
-        <h3 class="step-title">Sustain</h3>
-        <p class="step-desc">The estate goes under management: preventive maintenance cycles, corrective response, spare logistics and remote software updates — for the life of the fleet.</p>
-        <div class="step-chips mono"><span>PREVENTIVE CYCLES</span><span>SWAP STOCK</span><span>REMOTE UPDATES</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 05 SOFTWARE ============ -->
-<section class="section software" id="software">
-  <div class="container">
-    <div class="section-head" data-reveal>
-      <span class="sec-label mono">[ 05 ] — SOFTWARE</span>
-      <h2 class="section-title">We don't just deploy terminals.<br>We <em>program</em> them<span class="red-solid">.</span></h2>
-    </div>
-
-    <div class="sw-grid">
-      <div class="sw-copy" data-reveal>
-        <p class="lede">Most providers stop at the hardware. ARAHNETS builds the application layer — the payment flows, host links and update pipelines that turn a device into infrastructure.</p>
-        <ul class="sw-features" id="swFeatures">
-          <li class="active" data-f="0"><span class="f-idx mono">F·01</span><div><h4>Fleet operating view</h4><p>Every terminal, every transaction, one console — health, volume and version state in real time.</p></div></li>
-          <li data-f="1"><span class="f-idx mono">F·02</span><div><h4>Host &amp; switching integration</h4><p>ISO 8583 authorization against acquirer hosts and national switching — QRIS, debit, credit, multi-acquirer routing.</p></div></li>
-          <li data-f="2"><span class="f-idx mono">F·03</span><div><h4>Remote fleet updates</h4><p>Signed builds staged and pushed to thousands of terminals overnight — no trucks, no downtime windows.</p></div></li>
-        </ul>
-        <a href="#contact" class="btn btn-ghost">Discuss a build <span class="arr">→</span></a>
-      </div>
-
-      <div class="sw-stage">
-        <!-- Card 1: fleet dashboard -->
-        <div class="sw-card" data-feature="0" data-reveal>
-          <div class="ui-window">
-            <div class="ui-topbar mono"><span class="ui-dots"><i></i><i></i><i></i></span><span>ARAHNETS FLEET OS — v4.2</span><span class="red">● LIVE</span></div>
-            <div class="ui-body">
-              <div class="ui-side" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i></div>
-              <div class="ui-main">
-                <div class="ui-stats mono">
-                  <div><span>ONLINE</span><b>14,982</b></div>
-                  <div><span>TPS</span><b>41.2</b></div>
-                  <div><span>APPROVAL</span><b class="red">98.7%</b></div>
-                </div>
-                <svg class="ui-chart" viewBox="0 0 420 110" preserveAspectRatio="none" aria-hidden="true">
-                  <polyline class="chart-area" points="0,95 30,80 60,86 90,64 120,70 150,52 180,60 210,40 240,48 270,30 300,42 330,24 360,34 390,18 420,26 420,110 0,110" fill="rgba(200,16,46,.07)" stroke="none"/>
-                  <polyline class="chart-line" points="0,95 30,80 60,86 90,64 120,70 150,52 180,60 210,40 240,48 270,30 300,42 330,24 360,34 390,18 420,26" fill="none" stroke="#C8102E" stroke-width="2"/>
-                </svg>
-                <ul class="ui-rows mono" id="uiRows"></ul>
-              </div>
-            </div>
-          </div>
-          <span class="hcard-tag mono">FLEET CONSOLE</span>
+        <div class="step" data-reveal>
+          <span class="step-idx mono">STEP — 01</span>
+          <h3 class="step-title">Consult</h3>
+          <p class="step-desc">We scope the estate: transaction volume, acquirer relationships, sites, connectivity and
+            SLA targets. You get a fleet design, not a quotation template.</p>
+          <div class="step-chips mono"><span>FLEET SIZING</span><span>ACQUIRER MAP</span><span>SLA TARGETS</span></div>
         </div>
 
-        <!-- Card 2: host integration code -->
-        <div class="sw-card" data-feature="1" data-reveal>
-          <div class="ui-window code-window">
-            <div class="ui-topbar mono"><span class="ui-dots"><i></i><i></i><i></i></span><span>host-authorize.ts</span><span>ISO 8583</span></div>
-            <pre class="code mono"><code><span class="c-dim">// authorize against acquirer host</span>
+        <div class="step" data-reveal style="--d:.06s">
+          <span class="step-idx mono">STEP — 02</span>
+          <h3 class="step-title">Provision</h3>
+          <p class="step-desc">Terminals are sourced, configured and key-injected under certified handling. Profiles are
+            pre-staged per acquirer so devices arrive transaction-ready.</p>
+          <div class="step-chips mono"><span>KEY INJECTION</span><span>PROFILE STAGING</span><span>ASSET TAGGING</span>
+          </div>
+        </div>
+
+        <div class="step" data-reveal style="--d:.12s">
+          <span class="step-idx mono">STEP — 03</span>
+          <h3 class="step-title">Deploy</h3>
+          <p class="step-desc">Nationwide rollout with on-site installation, merchant training and first-transaction
+            verification at every point of acceptance.</p>
+          <div class="step-chips mono"><span>ON-SITE INSTALL</span><span>TRAINING</span><span>LIVE VERIFICATION</span>
+          </div>
+        </div>
+
+        <div class="step" data-reveal style="--d:.18s">
+          <span class="step-idx mono">STEP — 04</span>
+          <h3 class="step-title">Sustain</h3>
+          <p class="step-desc">The estate goes under management: preventive maintenance cycles, corrective response,
+            spare logistics and remote software updates — for the life of the fleet.</p>
+          <div class="step-chips mono"><span>PREVENTIVE CYCLES</span><span>SWAP STOCK</span><span>REMOTE UPDATES</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 SOFTWARE ============ -->
+  <section class="section software" id="software">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="sec-label mono">[ 05 ] — SOFTWARE</span>
+        <h2 class="section-title">We don't just deploy terminals.<br>We <em>program</em> them<span
+            class="red-solid">.</span></h2>
+      </div>
+
+      <div class="sw-grid">
+        <div class="sw-copy" data-reveal>
+          <p class="lede">Most providers stop at the hardware. ARAHNETS builds the application layer — the payment
+            flows, host links and update pipelines that turn a device into infrastructure.</p>
+          <ul class="sw-features" id="swFeatures">
+            <li class="active" data-f="0"><span class="f-idx mono">F·01</span>
+              <div>
+                <h4>Fleet operating view</h4>
+                <p>Every terminal, every transaction, one console — health, volume and version state in real time.</p>
+              </div>
+            </li>
+            <li data-f="1"><span class="f-idx mono">F·02</span>
+              <div>
+                <h4>Host &amp; switching integration</h4>
+                <p>ISO 8583 authorization against acquirer hosts and national switching — QRIS, debit, credit,
+                  multi-acquirer routing.</p>
+              </div>
+            </li>
+            <li data-f="2"><span class="f-idx mono">F·03</span>
+              <div>
+                <h4>Remote fleet updates</h4>
+                <p>Signed builds staged and pushed to thousands of terminals overnight — no trucks, no downtime windows.
+                </p>
+              </div>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost">Discuss a build <span class="arr">→</span></a>
+        </div>
+
+        <div class="sw-stage">
+          <!-- Card 1: fleet dashboard -->
+          <div class="sw-card" data-feature="0" data-reveal>
+            <div class="ui-window">
+              <div class="ui-topbar mono"><span class="ui-dots"><i></i><i></i><i></i></span><span>ARAHNETS FLEET OS —
+                  v4.2</span><span class="red">● LIVE</span></div>
+              <div class="ui-body">
+                <div class="ui-side" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+                <div class="ui-main">
+                  <div class="ui-stats mono">
+                    <div><span>ONLINE</span><b>14,982</b></div>
+                    <div><span>TPS</span><b>41.2</b></div>
+                    <div><span>APPROVAL</span><b class="red">98.7%</b></div>
+                  </div>
+                  <svg class="ui-chart" viewBox="0 0 420 110" preserveAspectRatio="none" aria-hidden="true">
+                    <polyline class="chart-area"
+                      points="0,95 30,80 60,86 90,64 120,70 150,52 180,60 210,40 240,48 270,30 300,42 330,24 360,34 390,18 420,26 420,110 0,110"
+                      fill="rgba(200,16,46,.07)" stroke="none" />
+                    <polyline class="chart-line"
+                      points="0,95 30,80 60,86 90,64 120,70 150,52 180,60 210,40 240,48 270,30 300,42 330,24 360,34 390,18 420,26"
+                      fill="none" stroke="#C8102E" stroke-width="2" />
+                  </svg>
+                  <ul class="ui-rows mono" id="uiRows"></ul>
+                </div>
+              </div>
+            </div>
+            <span class="hcard-tag mono">FLEET CONSOLE</span>
+          </div>
+
+          <!-- Card 2: host integration code -->
+          <div class="sw-card" data-feature="1" data-reveal>
+            <div class="ui-window code-window">
+              <div class="ui-topbar mono"><span
+                  class="ui-dots"><i></i><i></i><i></i></span><span>host-authorize.ts</span><span>ISO 8583</span></div>
+              <pre class="code mono"><code><span class="c-dim">// authorize against acquirer host</span>
 terminal.<span class="c-red">on</span>(<span class="c-red">"card_present"</span>, <span class="c-dim">async</span> (tx) =&gt; {
   <span class="c-dim">const</span> res = <span class="c-dim">await</span> host.<span class="c-red">authorize</span>(tx, {
     mti: <span class="c-red">"0100"</span>, stan: seq.<span class="c-red">next</span>(),
@@ -410,108 +500,122 @@ terminal.<span class="c-red">on</span>(<span class="c-red">"card_present"</span>
     receipt.<span class="c-red">print</span>(tx.<span class="c-red">approve</span>());   <span class="c-dim">// 212ms avg</span>
   }
 });</code></pre>
-            <div class="code-foot mono"><span>F39 — 00 · APPROVED</span><span class="red">LATENCY 212MS</span></div>
-          </div>
-          <span class="hcard-tag mono">HOST INTEGRATION</span>
-        </div>
-
-        <!-- Card 3: update pipeline -->
-        <div class="sw-card" data-feature="2" data-reveal>
-          <div class="ui-window">
-            <div class="ui-topbar mono"><span class="ui-dots"><i></i><i></i><i></i></span><span>REMOTE UPDATE — BUILD 4.2.1</span><span class="red">STAGING</span></div>
-            <div class="pipe mono">
-              <div class="pipe-row done"><span class="pipe-check">✓</span><span>BUILD SIGNED</span><span class="pipe-val">SHA-256</span></div>
-              <div class="pipe-row done"><span class="pipe-check">✓</span><span>CANARY FLEET</span><span class="pipe-val">50 / 50</span></div>
-              <div class="pipe-row live"><span class="pipe-check">●</span><span>NATIONAL ROLLOUT</span><span class="pipe-val red">68%</span></div>
-              <div class="pipe-bar"><span id="pipeFill"></span></div>
-              <div class="pipe-row queue"><span class="pipe-check">○</span><span>VERIFY &amp; SEAL</span><span class="pipe-val">QUEUED</span></div>
-              <div class="pipe-foot"><span>10,187 / 14,982 TERMINALS UPDATED</span><span>NO DOWNTIME</span></div>
+              <div class="code-foot mono"><span>F39 — 00 · APPROVED</span><span class="red">LATENCY 212MS</span></div>
             </div>
+            <span class="hcard-tag mono">HOST INTEGRATION</span>
           </div>
-          <span class="hcard-tag mono">UPDATE PIPELINE</span>
+
+          <!-- Card 3: update pipeline -->
+          <div class="sw-card" data-feature="2" data-reveal>
+            <div class="ui-window">
+              <div class="ui-topbar mono"><span class="ui-dots"><i></i><i></i><i></i></span><span>REMOTE UPDATE — BUILD
+                  4.2.1</span><span class="red">STAGING</span></div>
+              <div class="pipe mono">
+                <div class="pipe-row done"><span class="pipe-check">✓</span><span>BUILD SIGNED</span><span
+                    class="pipe-val">SHA-256</span></div>
+                <div class="pipe-row done"><span class="pipe-check">✓</span><span>CANARY FLEET</span><span
+                    class="pipe-val">50 / 50</span></div>
+                <div class="pipe-row live"><span class="pipe-check">●</span><span>NATIONAL ROLLOUT</span><span
+                    class="pipe-val red">68%</span></div>
+                <div class="pipe-bar"><span id="pipeFill"></span></div>
+                <div class="pipe-row queue"><span class="pipe-check">○</span><span>VERIFY &amp; SEAL</span><span
+                    class="pipe-val">QUEUED</span></div>
+                <div class="pipe-foot"><span>10,187 / 14,982 TERMINALS UPDATED</span><span>NO DOWNTIME</span></div>
+              </div>
+            </div>
+            <span class="hcard-tag mono">UPDATE PIPELINE</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ============ 06 NETWORK (Mitra & Client) ============ -->
-<section class="section network" id="network">
-  <div class="container">
-    <div class="section-head center" data-reveal>
-      <span class="sec-label mono">[ 06 ] — MITRA &amp; CLIENT</span>
-      <h2 class="section-title">One network.<br>Every sector that transacts<span class="red-solid">.</span></h2>
-      <p class="section-sub center">Acquiring banks, switching networks and enterprise merchants run on estates we deploy and keep alive.</p>
-    </div>
-  </div>
-  <div class="constellation" data-reveal>
-    <canvas id="net" aria-label="Constellation of client sectors connected to ARAHNETS"></canvas>
-  </div>
-  <div class="container">
-    <ul class="partner-chips mono" data-reveal>
-      <li>ACQUIRING BANKS</li>
-      <li>SWITCHING NETWORKS</li>
-      <li>RETAIL CHAINS</li>
-      <li>FUEL &amp; ENERGY</li>
-      <li>HOSPITALITY GROUPS</li>
-      <li>LOGISTICS FLEETS</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ============ 07 CTA ============ -->
-<section class="cta" id="contact">
-  <div class="cta-bg" aria-hidden="true"><div class="cta-glow"></div><div class="hero-beam cta-beam"></div></div>
-  <div class="container cta-inner">
-    <span class="sec-label mono" data-reveal>[ 07 ] — DEPLOY</span>
-    <h2 class="display cta-title" data-reveal style="--d:.05s">Let's deploy<span class="red-solid">.</span></h2>
-    <p class="cta-sub" data-reveal style="--d:.12s">Tell us the size of your fleet. We'll handle everything between purchase order and production — and keep it running after.</p>
-    <div class="cta-actions" data-reveal style="--d:.18s">
-      <a class="btn btn-red btn-lg" href="mailto:sales@arahnets.co.id">Request a consultation <span class="arr">→</span></a>
-    </div>
-    <div class="cta-meta mono" data-reveal style="--d:.24s">
-      <a href="mailto:sales@arahnets.co.id">SALES@ARAHNETS.CO.ID</a>
-      <span class="sep">/</span><span>JAKARTA — INDONESIA</span>
-      <span class="sep">/</span><span>RESPONSE &lt; 1 BUSINESS DAY</span>
-    </div>
-  </div>
-</section>
-
-<!-- footer -->
-<footer class="footer">
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <a class="logo" href="#top"><span class="logo-mark"></span><span class="logo-word">ARAHNETS</span></a>
-      <p class="footer-tag">Payment infrastructure, engineered.<br>Ingenico-certified partner since 2006.</p>
-    </div>
-    <div class="footer-cols">
-      <div class="fcol">
-        <span class="fcol-h mono">STACK</span>
-        <a href="#services">Terminal EDC</a>
-        <a href="#services">EDC Rent</a>
-        <a href="#services">Field Services</a>
-        <a href="#software">Software Development</a>
-      </div>
-      <div class="fcol">
-        <span class="fcol-h mono">COMPANY</span>
-        <a href="#credentials">Credentials</a>
-        <a href="#proof">Proof</a>
-        <a href="#network">Mitra &amp; Client</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="fcol">
-        <span class="fcol-h mono">STATUS</span>
-        <span class="fstatus mono"><span class="dot"></span>ALL TERMINALS OPERATIONAL</span>
-        <span class="fstatus-sub mono">MONITORED 24 / 7 / 365</span>
+  <!-- ============ 06 NETWORK (Mitra & Client) ============ -->
+  <section class="section network" id="network">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <span class="sec-label mono">[ 06 ] — MITRA &amp; CLIENT</span>
+        <h2 class="section-title">One network.<br>Every sector that transacts<span class="red-solid">.</span></h2>
+        <p class="section-sub center">Acquiring banks, switching networks and enterprise merchants run on estates we
+          deploy and keep alive.</p>
       </div>
     </div>
-  </div>
-  <div class="container footer-base mono">
-    <span>© 2026 ARAHNETS. ALL RIGHTS RESERVED.</span>
-    <span>EST. 2006 — JAKARTA, ID</span>
-  </div>
-</footer>
+    <div class="constellation" data-reveal>
+      <canvas id="net" aria-label="Constellation of client sectors connected to ARAHNETS"></canvas>
+    </div>
+    <div class="logo-band" role="region" aria-label="Selected clients and partners" data-reveal>
+      <p class="logo-band-label mono">SELECTED CLIENTS &amp; PARTNERS</p>
+      <div class="logo-belt">
+        <div class="logo-track" id="logoTrack">
+          <ul class="logo-set">
+            <li><img src="assets/client-logo/KB_Bank_logo.png" alt="KB Bank" loading="lazy"></li>
+            <li><img src="assets/client-logo/Logo_Nobubank.png" alt="Nobu National Bank" loading="lazy"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ============ 07 CTA ============ -->
+  <section class="cta" id="contact">
+    <div class="cta-bg" aria-hidden="true">
+      <div class="cta-glow"></div>
+      <div class="hero-beam cta-beam"></div>
+    </div>
+    <div class="container cta-inner">
+      <span class="sec-label mono" data-reveal>[ 07 ] — DEPLOY</span>
+      <h2 class="display cta-title" data-reveal style="--d:.05s">Let's deploy<span class="red-solid">.</span></h2>
+      <p class="cta-sub" data-reveal style="--d:.12s">Tell us the size of your fleet. We'll handle everything between
+        purchase order and production — and keep it running after.</p>
+      <div class="cta-actions" data-reveal style="--d:.18s">
+        <a class="btn btn-red btn-lg" href="mailto:ada@arahnets.com">Request a consultation <span
+            class="arr">→</span></a>
+      </div>
+      <div class="cta-meta mono" data-reveal style="--d:.24s">
+        <a href="mailto:ada@arahnets.com">ADA@ARAHNETS.COM</a>
+        <span class="sep">/</span><span>JAKARTA — INDONESIA</span>
+        <span class="sep">/</span><span>RESPONSE &lt; 1 BUSINESS DAY</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="logo" href="#top"><span class="logo-mark"></span><span class="logo-word">ARAHNETS</span></a>
+        <p class="footer-tag">Payment infrastructure, engineered.<br>Ingenico-certified partner since 2006.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="fcol">
+          <span class="fcol-h mono">STACK</span>
+          <a href="#services">Terminal EDC</a>
+          <a href="#services">EDC Rent</a>
+          <a href="#services">Field Services</a>
+          <a href="#software">Software Development</a>
+        </div>
+        <div class="fcol">
+          <span class="fcol-h mono">COMPANY</span>
+          <a href="#credentials">Credentials</a>
+          <a href="#proof">Proof</a>
+          <a href="#network">Mitra &amp; Client</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="fcol">
+          <span class="fcol-h mono">STATUS</span>
+          <span class="fstatus mono"><span class="dot"></span>ALL TERMINALS OPERATIONAL</span>
+          <span class="fstatus-sub mono">MONITORED 24 / 7 / 365</span>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-base mono">
+      <span>© 2026 ARAHNETS. ALL RIGHTS RESERVED.</span>
+      <span>EST. 2006 — JAKARTA, ID</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="js/main.js"></script>
 </body>
+
 </html>

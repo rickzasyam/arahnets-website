@@ -1,0 +1,11 @@
+{
+  "name": "arahnets-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ARAHNETS — Ingenico-certified payment infrastructure marketing site.",
+  "scripts": {
+    "logos": "node scripts/generate-logos.mjs",
+    "logos:watch": "node scripts/generate-logos.mjs --watch",
+    "serve": "npx -y serve ."
+  }
+}

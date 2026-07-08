@@ -16,9 +16,9 @@
   --line2:     rgba(17,17,17,.18);
   --red:       #C8102E;
   --red-dim:   rgba(200,16,46,.06);
-  --font-d:    "Playfair Display", Georgia, "Times New Roman", serif;
-  --font-b:    "Inter", system-ui, sans-serif;
-  --font-m:    "Inter", system-ui, sans-serif; /* label face — letter-spaced caps */
+  --font-d:    "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-b:    "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-m:    "Plus Jakarta Sans", system-ui, sans-serif; /* label face — letter-spaced caps */
   --nav-h:     72px;
   --ease:      cubic-bezier(.22,1,.36,1);
 }
@@ -749,18 +749,37 @@ body.loaded .hl-in{ transform:translateY(0); }
   margin-top:-20px;
 }
 .constellation canvas{ width:100%; height:100%; display:block; }
-.partner-chips{
-  display:flex; flex-wrap:wrap; justify-content:center; gap:12px;
-  margin-top:30px;
+/* client logo marquee */
+.logo-band{
+  margin-top:40px;
+  padding:44px 0 40px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
 }
-.partner-chips li{
-  font-size:10px; letter-spacing:.22em; color:var(--ink70);
-  border:1px solid var(--line2); padding:12px 20px;
-  transition:border-color .3s, color .3s, background .3s;
+.logo-band-label{
+  text-align:center;
+  font-size:14px; letter-spacing:.3em; color:var(--ink45);
+  margin-bottom:36px;
 }
-.partner-chips li:hover{
-  border-color:var(--red); color:var(--ink); background:var(--panel);
+.logo-belt{
+  overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image:linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
 }
+.logo-track{
+  display:flex; width:max-content;
+  will-change:transform;
+}
+.logo-set{
+  display:flex; align-items:center; flex-shrink:0;
+  gap:84px; padding-right:84px;
+}
+.logo-set img{
+  height:70px; width:auto; max-width:none;
+  filter:grayscale(1); opacity:.55;
+  transition:filter .5s, opacity .5s;
+}
+.logo-set li:hover img{ filter:none; opacity:1; }
 
 /* ============================================================
    07 — CTA
@@ -848,6 +867,8 @@ body.loaded .hl-in{ transform:translateY(0); }
   .metric{ margin-right:0; padding-right:0; }
   .proof-band{ transform:skewY(-3.4deg); }
   .constellation{ height:420px; }
+  .logo-set{ gap:48px; padding-right:48px; }
+  .logo-set img{ height:28px; }
   .footer-cols{ grid-template-columns:1fr 1fr; }
   .svc{ position:relative; top:auto; }
   .cta{ padding:130px 0 110px; }
@@ -866,4 +887,7 @@ body.loaded .hl-in{ transform:translateY(0); }
   [data-reveal]{ opacity:1; transform:none; }
   .hl-in{ transform:none; }
   .ticker-track{ animation:none; }
+  /* static, centered logo row instead of the marquee */
+  .logo-track{ width:100%; justify-content:center; }
+  .logo-set{ flex-wrap:wrap; justify-content:center; padding-right:0; row-gap:28px; }
 }
