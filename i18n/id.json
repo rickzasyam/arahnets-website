@@ -28,6 +28,7 @@
   "hero.chipUp": "UPTIME ARMADA",
   "hero.chipLat": "LATENSI OTORISASI",
   "hero.scroll": "GULIR",
+  "hero.video": "Terminal pembayaran EDC dalam tampilan tiga dimensi",
 
   "tick.1": "TERSERTIFIKASI INGENICO",
   "tick.2": "SEJAK 2006",
@@ -70,6 +71,7 @@
   "svc1.s2v": "EMV L1/L2 · INJEKSI KUNCI AMAN",
   "svc1.s3t": "PROVISIONING",
   "svc1.s3v": "PROFIL PRA-SIAP PER ACQUIRER",
+  "svc1.video": "Animasi terminal mPOS berpasangan dengan aplikasi ponsel melalui Bluetooth",
   "svc1.s4t": "LOGISTIK",
   "svc1.s4v": "PENGIRIMAN NASIONAL & PENANDAAN ASET",
 

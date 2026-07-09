@@ -130,13 +130,25 @@ em{ font-style:italic; color:inherit; }
   height:var(--nav-h);
   display:flex; align-items:center; justify-content:space-between; gap:24px;
 }
-.logo{ display:flex; align-items:center; gap:10px; }
+/* flex-shrink:0 — the wordmark must never get crushed by the CTA button
+   and language switcher fighting for space on narrow phones; those two
+   shrink instead (see nav-actions rules in the mobile breakpoints below) */
+.logo{ display:flex; align-items:center; gap:10px; flex-shrink:0; }
 .logo-mark{
   width:11px; height:11px; background:var(--red); transform:rotate(45deg);
 }
 .logo-word{
+  display:flex; align-items:center;
   font-family:var(--font-d); font-weight:700; font-size:16px;
   letter-spacing:.28em;
+}
+/* width is the authored dimension (not height) so that if flex-shrink or
+   max-width:100% ever constrains it, aspect-ratio recomputes height from
+   that constrained width instead of holding height fixed and distorting */
+.logo-img{
+  display:block;
+  width:235px; height:auto;
+  aspect-ratio:13493/2294;
 }
 .nav-links{ display:flex; gap:34px; }
 .nav-links a{
@@ -293,18 +305,34 @@ body.loaded .hl-in{ transform:translateY(0); }
 }
 .hcard-terminal{
   top:0; right:24px;
-  padding:22px 22px 18px;
-  transform:rotate(3deg);
+  /* floating object — no card box around the video */
+  padding:0; background:transparent; border:0; box-shadow:none;
   animation:floaty 7s ease-in-out infinite;
 }
-.hcard-terminal .led{ animation:pulse 1.8s infinite; }
+.hero-vid{
+  display:block;
+  width:min(500px, 84vw);
+  /* central 75% band of the 16:9 source — device sits at 22–78% of it,
+     leaving real margin so the edge feather never touches the device */
+  aspect-ratio:4/3;
+  object-fit:cover;
+  /* sharpness first: no luma ops (brightness/contrast clip and compress the
+     device's shading) — only a chroma pull to neutralize the backdrop's blue
+     tint. Device tones are exactly the source's. */
+  filter:saturate(.45);
+  /* feather lives entirely in the empty margin around the device:
+     opaque past the device's widest pose (66% ≥ device extent on both axes),
+     fully transparent before the rect edge (81% × radius < half-size) */
+  -webkit-mask-image:radial-gradient(ellipse 58% 60% at 50% 51%, #000 66%, transparent 81%);
+          mask-image:radial-gradient(ellipse 58% 60% at 50% 51%, #000 66%, transparent 81%);
+}
 .hcard-tag{
   display:block; margin-top:14px; text-align:center;
   font-size:9px; letter-spacing:.28em; color:var(--ink45);
 }
 @keyframes floaty{
-  0%,100%{ transform:rotate(3deg) translateY(0); }
-  50%{ transform:rotate(3deg) translateY(-14px); }
+  0%,100%{ transform:translateY(0); }
+  50%{ transform:translateY(-14px); }
 }
 .hcard-feed{
   left:-16px; bottom:26px; width:300px;
@@ -349,10 +377,6 @@ body.loaded .hl-in{ transform:translateY(0); }
 .chip-uptime{ top:34px; left:-8px; animation:floaty3 6s ease-in-out infinite; }
 .chip-latency{ bottom:-8px; right:10px; animation:floaty3 7.5s ease-in-out .8s infinite; }
 @keyframes floaty3{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-8px);} }
-
-.svg-mono{ font-family:var(--font-m); }
-.svg-disp{ font-family:var(--font-b); }
-.keypad rect{ fill:#101013; stroke:rgba(255,255,255,.06); }
 
 .scroll-cue{
   position:absolute; bottom:34px; left:50%; transform:translateX(-50%);
@@ -555,6 +579,15 @@ body.loaded .hl-in{ transform:translateY(0); }
 .spec:hover{ background:rgba(17,17,17,.025); }
 .spec span{ font-size:9px; letter-spacing:.28em; color:var(--red); font-weight:500; }
 .spec b{ font-weight:500; font-size:12px; letter-spacing:.08em; color:var(--ink70); line-height:1.5; }
+/* media row above the spec list (TRM·01 demo video) */
+.spec-media{ border-bottom:1px solid var(--line); }
+.svc-vid{
+  display:block; width:100%;
+  aspect-ratio:904/728;
+  object-fit:cover;
+  /* soften the vendor blues and nudge its bright backdrop into the panel white */
+  filter:saturate(.8) brightness(1.03);
+}
 
 /* ============================================================
    03 — PROOF (angled metric band)
@@ -751,6 +784,16 @@ body.loaded .hl-in{ transform:translateY(0); }
   font-size:9px; letter-spacing:.2em; color:var(--ink45);
 }
 
+/* TMS isometric shot (card 3) — cover-crop trims the vendor table at the
+   image's top right; keep the device cluster at the centre-left in view */
+.tms-shot{
+  display:block; width:100%; height:auto;
+  aspect-ratio:5/4;
+  object-fit:cover;
+  object-position:0 50%;
+  filter:saturate(.8);
+}
+
 .pipe{ padding:22px 24px; }
 .pipe-row{
   display:grid; grid-template-columns:22px 1fr auto; gap:12px; align-items:center;
@@ -923,6 +966,7 @@ html[lang="ja"] .section-title, html[lang|="zh"] .section-title{
   .nav-links{ display:none; }
   .nav-actions{ gap:12px; }
   .lang-menu{ right:-2px; }
+  .logo-img{ width:168px; }
   .display{ font-size:clamp(32px, calc(12vw - 7px), 64px); }
   .section{ padding:100px 0; }
   .hero{ padding-bottom:100px; }
@@ -942,6 +986,21 @@ html[lang="ja"] .section-title, html[lang|="zh"] .section-title{
   .footer-cols{ grid-template-columns:1fr 1fr; }
   .svc{ position:relative; top:auto; }
   .cta{ padding:130px 0 110px; }
+}
+@media (max-width:400px){
+  .logo-img{ width:132px; }
+  .nav-inner{ gap:8px; }
+  .nav-actions{ gap:6px; }
+  /* the CTA button + lang switcher yield space to the logo, not vice versa */
+  .nav-actions .btn-sm{ padding:8px 12px; font-size:11px; letter-spacing:0; }
+  .lang-btn{ font-size:9.5px; gap:5px; }
+}
+@media (max-width:340px){
+  .logo-img{ width:100px; }
+  .nav-inner{ gap:6px; }
+  .nav-actions{ gap:6px; }
+  .nav-actions .btn-sm{ padding:7px 10px; font-size:10px; }
+  .lang-btn{ font-size:9px; gap:4px; }
 }
 
 /* ============================================================

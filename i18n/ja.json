@@ -28,6 +28,7 @@
   "hero.chipUp": "フリート稼働率",
   "hero.chipLat": "承認レイテンシ",
   "hero.scroll": "スクロール",
+  "hero.video": "回転する3D表示のEDC決済端末",
 
   "tick.1": "INGENICO認定",
   "tick.2": "2006年創業",
@@ -70,6 +71,7 @@
   "svc1.s2v": "EMV L1/L2 · セキュアキーインジェクション",
   "svc1.s3t": "プロビジョニング",
   "svc1.s3v": "アクワイアラ別プロファイルを事前設定",
+  "svc1.video": "BluetoothでスマートフォンアプリとペアリングするmPOS端末のアニメーション",
   "svc1.s4t": "物流",
   "svc1.s4v": "全国配送 & 資産タグ管理",
 

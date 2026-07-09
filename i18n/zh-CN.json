@@ -28,6 +28,7 @@
   "hero.chipUp": "机队正常运行率",
   "hero.chipLat": "授权延迟",
   "hero.scroll": "滚动",
+  "hero.video": "旋转三维展示的 EDC 支付终端",
 
   "tick.1": "INGENICO 认证",
   "tick.2": "始于 2006",
@@ -70,6 +71,7 @@
   "svc1.s2v": "EMV L1/L2 · 安全密钥注入",
   "svc1.s3t": "预配",
   "svc1.s3v": "按收单行预置配置文件",
+  "svc1.video": "mPOS 终端通过蓝牙与手机应用配对的动画",
   "svc1.s4t": "物流",
   "svc1.s4v": "全国配送与资产标签",
 

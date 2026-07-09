@@ -28,6 +28,7 @@
   "hero.chipUp": "FLEET UPTIME",
   "hero.chipLat": "AUTH LATENCY",
   "hero.scroll": "SCROLL",
+  "hero.video": "EDC payment terminal in a rotating three-dimensional view",
 
   "tick.1": "INGENICO CERTIFIED",
   "tick.2": "EST. 2006",
@@ -70,6 +71,7 @@
   "svc1.s2v": "EMV L1/L2 · SECURE KEY INJECTION",
   "svc1.s3t": "PROVISIONING",
   "svc1.s3v": "PRE-STAGED PROFILES PER ACQUIRER",
+  "svc1.video": "Animation of an mPOS terminal pairing with a phone app over Bluetooth",
   "svc1.s4t": "LOGISTICS",
   "svc1.s4v": "NATIONWIDE DELIVERY & ASSET TAGGING",
 

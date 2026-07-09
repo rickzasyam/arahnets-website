@@ -111,6 +111,64 @@
     loop(() => pushRow(uiRows, 4, uiRow), 1800, 3600);
   }
 
+  /* ---------- hero terminal video ---------- */
+  const vid = $(".hero-vid");
+  if (vid) {
+    // play nearly the full source at its natural pace, skipping only the
+    // opening tiled scene (0–1s, an unrelated top-down shot that breaks the
+    // floating-object illusion); SEG_END sits just before the file end so the
+    // ~4Hz timeupdate clamp always wraps before the native loop flashes t=0
+    const SEG_START = 1.04, SEG_END = 5.95;
+    const clamp = () => {
+      if (vid.currentTime < SEG_START - 0.01 || vid.currentTime >= SEG_END) {
+        vid.currentTime = SEG_START;
+      }
+    };
+    vid.addEventListener("loadedmetadata", clamp);
+    vid.addEventListener("timeupdate", clamp);
+    vid.muted = true; // belt & braces for autoplay policies
+    if (reduced) {
+      vid.autoplay = false;
+      vid.removeAttribute("autoplay");
+      vid.preload = "none";
+      vid.pause();
+    }
+    vid.addEventListener("error", () => {
+      const img = document.createElement("img");
+      img.className = vid.className;
+      img.src = vid.poster;
+      img.alt = vid.getAttribute("aria-label") || "";
+      vid.replaceWith(img);
+    });
+  }
+
+  /* ---------- services demo video (below the fold — lazy) ---------- */
+  const svid = $(".svc-vid");
+  if (svid) {
+    svid.muted = true;
+    svid.addEventListener("error", () => {
+      const img = document.createElement("img");
+      img.className = svid.className;
+      img.src = svid.poster;
+      img.alt = svid.getAttribute("aria-label") || "";
+      svid.replaceWith(img);
+    });
+    // reduced motion: never attach a source — the poster is the experience
+    if (!reduced) {
+      const vio = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            if (!svid.src) svid.src = svid.dataset.src;
+            svid.play().catch(() => {});
+          } else if (svid.src) {
+            svid.pause();
+          }
+        }
+      }, { rootMargin: "300px 0px" });
+      vio.observe(svid);
+    }
+  }
+
   /* ---------- hero parallax ---------- */
   const visual = $("#heroVisual");
   if (visual && !reduced && matchMedia("(pointer:fine)").matches) {
